@@ -1363,5 +1363,82 @@ document.addEventListener('DOMContentLoaded', () => {
 })();
 
 </script>
+
+<script>
+
+/* ============================================================
+   HUB ARTICLE FILTER
+   ============================================================ */
+(function () {
+  'use strict';
+
+  var filterBtns   = document.querySelectorAll('.hub-filter');
+  var articleCards = document.querySelectorAll('.articles-grid .article-card');
+  var countEl      = document.querySelector('.hub-count');
+
+  if (!filterBtns.length || !articleCards.length) return;
+
+  function filterArticles(selected) {
+    var visible = 0;
+
+    articleCards.forEach(function (card) {
+      var cat = card.getAttribute('data-category') || '';
+      var show = selected === 'all' || cat === selected;
+
+      if (show) {
+        card.style.display = '';
+        card.style.opacity = '0';
+        card.style.transform = 'translateY(12px)';
+        // Stagger fade-in
+        setTimeout(function (c) {
+          return function () {
+            c.style.transition = 'opacity 0.3s ease, transform 0.3s ease';
+            c.style.opacity    = '1';
+            c.style.transform  = 'translateY(0)';
+          };
+        }(card), visible * 40);
+        visible++;
+      } else {
+        card.style.display   = 'none';
+        card.style.opacity   = '';
+        card.style.transform = '';
+        card.style.transition = '';
+      }
+    });
+
+    // Update count label if it exists
+    if (countEl) {
+      countEl.textContent = selected === 'all'
+        ? 'Showing all ' + articleCards.length + ' articles'
+        : 'Showing ' + visible + ' article' + (visible !== 1 ? 's' : '');
+    }
+  }
+
+  filterBtns.forEach(function (btn) {
+    btn.addEventListener('click', function () {
+      // Update active state
+      filterBtns.forEach(function (b) { b.classList.remove('active'); });
+      btn.classList.add('active');
+
+      var selected = btn.getAttribute('data-filter') || 'all';
+      filterArticles(selected);
+
+      // Smooth scroll to grid if needed
+      var grid = document.getElementById('articlesGrid');
+      if (grid) {
+        var rect   = grid.getBoundingClientRect();
+        var navH   = parseInt(getComputedStyle(document.documentElement).getPropertyValue('--nav-height') || '68', 10);
+        if (rect.top < navH) {
+          window.scrollTo({ top: grid.getBoundingClientRect().top + window.scrollY - navH - 16, behavior: 'smooth' });
+        }
+      }
+    });
+  });
+
+  // Initialise — show all
+  filterArticles('all');
+})();
+
+</script>
 </body>
 </html>

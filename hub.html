@@ -1,0 +1,1367 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width,initial-scale=1.0"/>
+  <!-- Primary SEO -->
+  <meta name="description" content="The Hub by YGH Tech: In-depth cybersecurity articles, threat intelligence, compliance guides, and executive advisory insights for security leaders and business decision-makers."/>
+  <meta name="keywords" content="cybersecurity blog, cybersecurity articles, threat intelligence, security advisory insights, compliance guides, cybersecurity news 2025"/>
+  <meta name="author" content="YGH Tech Advisory Team"/>
+  <meta name="robots" content="index, follow"/>
+  <link rel="canonical" href="https://www.yghtech.com/hub.html"/>
+
+  <!-- Open Graph -->
+  <meta property="og:type"        content="Blog"/>
+  <meta property="og:title"       content="The Hub | Cybersecurity Intelligence and Advisory Insights | YGH Tech"/>
+  <meta property="og:description" content="The Hub by YGH Tech: In-depth cybersecurity articles, threat intelligence, compliance guides, and executive advisory insights for security leaders and business decision-makers."/>
+  <meta property="og:url"         content="https://www.yghtech.com/hub.html"/>
+  <meta property="og:site_name"   content="YGH Tech"/>
+  <meta property="og:locale"      content="en_US"/>
+  
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card"        content="summary_large_image"/>
+  <meta name="twitter:title"       content="The Hub | Cybersecurity Intelligence and Advisory Insights | YGH Tech"/>
+  <meta name="twitter:description" content="The Hub by YGH Tech: In-depth cybersecurity articles, threat intelligence, compliance guides, and executive advisory insights for security leaders and business decision-makers."/>
+  <meta name="twitter:site"        content="@Yghtech"/>
+
+  <!-- Schema.org JSON-LD -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Blog", "@id": "https://www.yghtech.com/hub.html", "name": "The Hub | Cybersecurity Intelligence and Advisory Insights | YGH Tech", "description": "The Hub by YGH Tech: In-depth cybersecurity articles, threat intelligence, compliance guides, and executive advisory insights for security leaders and business decision-makers.", "url": "https://www.yghtech.com/hub.html", "publisher": {"@type": "Organization", "name": "YGH Tech", "url": "https://www.yghtech.com"}
+  }
+  </script>
+<title>The Hub | YGH Tech</title>
+<link rel="stylesheet" href="styles.css"/>
+<style>
+/* === HUB HERO CENTERED === */
+.hub-hero__inner {
+  text-align: center !important;
+  display: flex;
+  flex-direction: column;
+  align-items: center !important;
+}
+.hub-title { text-align: center !important; }
+.hub-subtitle { text-align: center !important; max-width: 560px; margin-left: auto; margin-right: auto; }
+.hub-meta { justify-content: center !important; }
+.hub-hero__inner .tag { align-self: center; }
+
+
+/* === ARTICLE CARD HEADERS: SOLID COLORS === */
+.article-card__header {
+  height: 80px !important;
+  position: relative;
+  overflow: hidden;
+  border-bottom: 1px solid rgba(255,255,255,0.05);
+  display: block !important;
+  border-radius: var(--radius-lg) var(--radius-lg) 0 0;
+}
+.article-card__header-grid { display: none !important; }
+.article-card__cat-icon    { display: none !important; }
+
+/* Each category accent fills the full header */
+.article-card__header-accent {
+  position: absolute !important;
+  inset: 0 !important;
+  opacity: 1 !important;
+}
+.article-card:hover .article-card__header-accent { opacity: 1 !important; filter: brightness(1.15); }
+
+/* Tighten the card body since header is shorter */
+.article-card__body { padding: 1rem 1.25rem !important; }
+
+/* Category colors — richer, more distinct */
+.cat-threat     { background: linear-gradient(135deg, #7f1d1d 0%, #991b1b 100%) !important; }
+.cat-zerotrust  { background: linear-gradient(135deg, #3730a3 0%, #4c1d95 100%) !important; }
+.cat-compliance { background: linear-gradient(135deg, #1e3a8a 0%, #1d4ed8 100%) !important; }
+.cat-cloud      { background: linear-gradient(135deg, #0c4a6e 0%, #0369a1 100%) !important; }
+.cat-executive  { background: linear-gradient(135deg, #78350f 0%, #b45309 100%) !important; }
+.cat-identity   { background: linear-gradient(135deg, #312e81 0%, #6366f1 100%) !important; }
+.cat-ai         { background: linear-gradient(135deg, #064e3b 0%, #059669 100%) !important; }
+.cat-supply     { background: linear-gradient(135deg, #164e63 0%, #0891b2 100%) !important; }
+.cat-incident   { background: linear-gradient(135deg, #7c2d12 0%, #ea580c 100%) !important; }
+.cat-risk       { background: linear-gradient(135deg, #451a03 0%, #92400e 100%) !important; }
+.cat-endpoint   { background: linear-gradient(135deg, #134e4a 0%, #0d9488 100%) !important; }
+.cat-data       { background: linear-gradient(135deg, #581c87 0%, #9333ea 100%) !important; }
+.cat-ot         { background: linear-gradient(135deg, #881337 0%, #be123c 100%) !important; }
+.cat-app        { background: linear-gradient(135deg, #0c4a6e 0%, #2563eb 100%) !important; }
+
+/* Featured article visual — also just a color gradient */
+.featured-article__visual {
+  background: linear-gradient(135deg, #1a0a00 0%, #3d1a00 50%, #7c2d12 100%) !important;
+}
+</style>
+</head>
+<body>
+<nav class="nav"><div class="nav__inner"><a href="index.html" class="nav__logo"><img src="logo.jpg" alt="YGH Tech" style="height:36px;width:auto;display:block;object-fit:contain;object-position:top center;"></a><ul class="nav__links"><li><a href="index.html" class="nav__link">Home</a></li><li><a href="services.html" class="nav__link">Services</a></li><li><a href="why-us.html" class="nav__link">Why Us</a></li><li><a href="industries.html" class="nav__link">Industries</a></li><li><a href="process.html" class="nav__link">Our Process</a></li><li><a href="about.html" class="nav__link">About</a></li><li><a href="hub.html" class="nav__link active">The Hub</a></li><li><a href="contact.html" class="nav__link">Contact</a></li></ul><div class="nav__cta"><a href="contact.html" class="btn btn-primary">Book a Consultation</a><button class="hamburger" aria-label="Toggle menu"><span class="hamburger__line"></span><span class="hamburger__line"></span><span class="hamburger__line"></span></button>
+</div></div></nav><div class="nav__mobile"><a href="index.html" class="nav__mobile-link">Home</a><a href="services.html" class="nav__mobile-link">Services</a><a href="why-us.html" class="nav__mobile-link">Why Us</a><a href="industries.html" class="nav__mobile-link">Industries</a><a href="process.html" class="nav__mobile-link">Our Process</a><a href="about.html" class="nav__mobile-link">About</a><a href="hub.html" class="nav__mobile-link active">The Hub</a><a href="contact.html" class="nav__mobile-link">Contact</a><a href="contact.html" class="btn btn-primary nav__mobile-cta">Book a Consultation</a></div>
+</div>
+</nav>
+</div></nav> <section class="hub-hero">
+<div class="hub-hero__bg" aria-hidden="true"></div>
+<div class="container hub-hero__inner">
+<span class="tag reveal">Cybersecurity Intelligence</span>
+<h1 class="hub-title reveal reveal-delay-1" id="hub-headline">The <span>Hub</span></h1>
+<p class="hub-subtitle reveal reveal-delay-2">Authoritative analysis, threat research, and advisory intelligence for security leaders and executive teams building stronger defenses in 2025 and beyond.</p>
+<div class="hub-meta reveal reveal-delay-3">
+<span class="hub-meta-item"><span class="hub-meta-dot"></span>42 Articles</span>
+<span class="hub-meta-item"><span class="hub-meta-dot"></span>Updated April 2026</span>
+<span class="hub-meta-item"><span class="hub-meta-dot"></span>YGH Tech Advisory Team</span>
+</div>
+</div>
+</section> <section class="hub-section">
+<div class="container"> <article class="featured-article reveal" data-category="threat-intelligence">
+<div class="featured-article__visual">
+<div class="featured-article__grid-bg" aria-hidden="true"></div>
+<div class="featured-article__glow" aria-hidden="true"></div>
+<span class="featured-article__label"><span class="featured-article__label-dot" aria-hidden="true"></span>Featured Article</span>
+</div>
+<div class="featured-article__body">
+<p class="featured-article__cat">Threat Intelligence</p>
+<h2 class="featured-article__title">AI-Augmented Cyberattacks: How Threat Actors Are Using Large Language Models in 2025</h2>
+<p class="featured-article__excerpt">The integration of generative AI into offensive cyber operations has fundamentally shifted what security teams must prepare for. From AI-generated spear-phishing campaigns that defeat traditional detection to automated vulnerability discovery at scale, threat actors are deploying LLMs to accelerate every phase of the attack lifecycle. This analysis examines documented adversary TTPs incorporating AI tools, the implications for enterprise defenses, and what security programs must adapt now.</p>
+<div class="featured-article__footer">
+<div class="article-byline"><strong>YGH Tech Advisory Team</strong><span>March 18, 2025 &middot; 14 min read</span></div>
+<a href="article-ransomware-2025.html" class="btn btn-primary">Read Article</a>
+</div>
+</div>
+</article> <div class="hub-controls reveal">
+<div class="hub-filters" role="group" aria-label="Filter articles by category">
+<button class="hub-filter active" data-filter="all">All Articles</button>
+<button class="hub-filter" data-filter="threat-intelligence">Threat Intelligence</button>
+<button class="hub-filter" data-filter="cloud-security">Cloud Security</button>
+<button class="hub-filter" data-filter="compliance">Compliance</button>
+<button class="hub-filter" data-filter="executive-advisory">Executive Advisory</button>
+<button class="hub-filter" data-filter="incident-response">Incident Response</button>
+<button class="hub-filter" data-filter="zero-trust">Zero Trust</button>
+<button class="hub-filter" data-filter="ai-security">AI &amp; Security</button>
+<button class="hub-filter" data-filter="identity">Identity &amp; Access</button>
+<button class="hub-filter" data-filter="risk">Risk Management</button>
+</div>
+<span class="hub-count" id="articleCount">Showing all 42 articles</span>
+</div> <div class="articles-grid" id="articlesGrid">
+<article class="article-card reveal" data-category="threat-intelligence">
+<div class="article-card__header">
+<div class="article-card__header-grid" aria-hidden="true"></div>
+<div class="article-card__header-accent cat-threat" aria-hidden="true"></div>
+<div class="article-card__cat-icon"><svg viewBox="0 0 20 20" fill="none"><circle cx="10" cy="10" r="7" stroke="currentColor" stroke-width="1.4" opacity="0.7"/><path d="M10 6V10L13 12" stroke="currentColor" stroke-width="1.4" stroke-linecap="round"/></svg></div>
+</div>
+<div class="article-card__body">
+<p class="article-card__cat-tag tag-threat">Threat Intelligence</p>
+<h3 class="article-card__title"><a href="article-ransomware-2025.html" style="color:inherit;text-decoration:none;">The 2025 Ransomware Landscape: New Extortion Tactics and the Organizations Being Targeted</a></h3>
+<p class="article-card__excerpt">Double and triple extortion have become the baseline. Ransomware groups now target backup infrastructure first, deploy custom malware that defeats EDR solutions, and use stolen data as negotiating leverage against insurers and regulators. We break down the most active threat groups and what defensive posture changes are non-negotiable.</p>
+<div class="article-card__footer">
+<span class="article-card__date">Mar 12, 2025</span>
+<span class="article-card__read">11 min &rarr;</span>
+</div>
+</div>
+</article><article class="article-card reveal reveal-delay-1" data-category="zero-trust">
+<div class="article-card__header">
+<div class="article-card__header-grid" aria-hidden="true"></div>
+<div class="article-card__header-accent cat-zerotrust" aria-hidden="true"></div>
+<div class="article-card__cat-icon"><svg viewBox="0 0 20 20" fill="none"><circle cx="10" cy="10" r="7" stroke="currentColor" stroke-width="1.4" opacity="0.7"/><path d="M10 6V10L13 12" stroke="currentColor" stroke-width="1.4" stroke-linecap="round"/></svg></div>
+</div>
+<div class="article-card__body">
+<p class="article-card__cat-tag tag-zerotrust">Zero Trust</p>
+<h3 class="article-card__title"><a href="article-zero-trust.html" style="color:inherit;text-decoration:none;">Zero Trust Architecture Is Not a Product, It&rsquo;s a Strategy Your Organization Has to Build</a></h3>
+<p class="article-card__excerpt">Vendors have co-opted Zero Trust to the point where it now describes everything from a firewall to an endpoint agent. This guide defines what genuine Zero Trust architecture requires: continuous verification, least-privilege access, micro-segmentation, and the organizational commitment most companies underestimate.</p>
+<div class="article-card__footer">
+<span class="article-card__date">Mar 8, 2025</span>
+<span class="article-card__read">9 min &rarr;</span>
+</div>
+</div>
+</article><article class="article-card reveal reveal-delay-2" data-category="compliance">
+<div class="article-card__header">
+<div class="article-card__header-grid" aria-hidden="true"></div>
+<div class="article-card__header-accent cat-compliance" aria-hidden="true"></div>
+<div class="article-card__cat-icon"><svg viewBox="0 0 20 20" fill="none"><circle cx="10" cy="10" r="7" stroke="currentColor" stroke-width="1.4" opacity="0.7"/><path d="M10 6V10L13 12" stroke="currentColor" stroke-width="1.4" stroke-linecap="round"/></svg></div>
+</div>
+<div class="article-card__body">
+<p class="article-card__cat-tag tag-compliance">Compliance</p>
+<h3 class="article-card__title"><a href="article-pci-dss-4.html" style="color:inherit;text-decoration:none;">PCI DSS 4.0: The March 2025 Deadline Has Arrived, Are You Actually Compliant?</a></h3>
+<p class="article-card__excerpt">March 31, 2025 marked the full enforcement of PCI DSS 4.0, retiring version 3.2.1. The new requirements around customized controls, targeted risk analysis, and MFA for all access to the cardholder data environment represent material changes many organizations still have not addressed.</p>
+<div class="article-card__footer">
+<span class="article-card__date">Mar 5, 2025</span>
+<span class="article-card__read">10 min &rarr;</span>
+</div>
+</div>
+</article><article class="article-card reveal" data-category="cloud-security">
+<div class="article-card__header">
+<div class="article-card__header-grid" aria-hidden="true"></div>
+<div class="article-card__header-accent cat-cloud" aria-hidden="true"></div>
+<div class="article-card__cat-icon"><svg viewBox="0 0 20 20" fill="none"><circle cx="10" cy="10" r="7" stroke="currentColor" stroke-width="1.4" opacity="0.7"/><path d="M10 6V10L13 12" stroke="currentColor" stroke-width="1.4" stroke-linecap="round"/></svg></div>
+</div>
+<div class="article-card__body">
+<p class="article-card__cat-tag tag-cloud">Cloud Security</p>
+<h3 class="article-card__title"><a href="article-cloud-security.html" style="color:inherit;text-decoration:none;">Cloud Misconfiguration: Why Breaches in AWS, Azure, and GCP Keep Happening to Prepared Organizations</a></h3>
+<p class="article-card__excerpt">Misconfiguration remains the number one cause of cloud security incidents. Public S3 buckets, overprivileged IAM roles, disabled logging, and exposed management interfaces are responsible for the majority of cloud-based breaches. We document the ten most exploited configurations.</p>
+<div class="article-card__footer">
+<span class="article-card__date">Feb 28, 2025</span>
+<span class="article-card__read">12 min &rarr;</span>
+</div>
+</div>
+</article><article class="article-card reveal reveal-delay-1" data-category="executive-advisory">
+<div class="article-card__header">
+<div class="article-card__header-grid" aria-hidden="true"></div>
+<div class="article-card__header-accent cat-executive" aria-hidden="true"></div>
+<div class="article-card__cat-icon"><svg viewBox="0 0 20 20" fill="none"><circle cx="10" cy="10" r="7" stroke="currentColor" stroke-width="1.4" opacity="0.7"/><path d="M10 6V10L13 12" stroke="currentColor" stroke-width="1.4" stroke-linecap="round"/></svg></div>
+</div>
+<div class="article-card__body">
+<p class="article-card__cat-tag tag-executive">Executive Advisory</p>
+<h3 class="article-card__title"><a href="article-zero-trust.html" style="color:inherit;text-decoration:none;">What Boards Actually Expect From Their CISO in 2025, And Why the Gap Is Still Widening</a></h3>
+<p class="article-card__excerpt">SEC cybersecurity disclosure rules have forced boards to develop opinions about security they largely did not have two years ago. What boards now want from security leadership is fundamentally different from the technical briefings most CISOs were trained to deliver.</p>
+<div class="article-card__footer">
+<span class="article-card__date">Feb 24, 2025</span>
+<span class="article-card__read">8 min &rarr;</span>
+</div>
+</div>
+</article><article class="article-card reveal reveal-delay-2" data-category="identity">
+<div class="article-card__header">
+<div class="article-card__header-grid" aria-hidden="true"></div>
+<div class="article-card__header-accent cat-identity" aria-hidden="true"></div>
+<div class="article-card__cat-icon"><svg viewBox="0 0 20 20" fill="none"><circle cx="10" cy="10" r="7" stroke="currentColor" stroke-width="1.4" opacity="0.7"/><path d="M10 6V10L13 12" stroke="currentColor" stroke-width="1.4" stroke-linecap="round"/></svg></div>
+</div>
+<div class="article-card__body">
+<p class="article-card__cat-tag tag-identity">Identity &amp; Access</p>
+<h3 class="article-card__title"><a href="article-mfa-fatigue.html" style="color:inherit;text-decoration:none;">MFA Fatigue Attacks: How Adversaries Are Bypassing Multi-Factor Authentication at Scale</a></h3>
+<p class="article-card__excerpt">MFA push notification fatigue floods a target with authentication requests until they approve one out of frustration. We examine documented attack chains, the platforms most vulnerable, and the control changes that actually defeat this technique.</p>
+<div class="article-card__footer">
+<span class="article-card__date">Feb 20, 2025</span>
+<span class="article-card__read">7 min &rarr;</span>
+</div>
+</div>
+</article><article class="article-card reveal" data-category="ai-security">
+<div class="article-card__header">
+<div class="article-card__header-grid" aria-hidden="true"></div>
+<div class="article-card__header-accent cat-ai" aria-hidden="true"></div>
+<div class="article-card__cat-icon"><svg viewBox="0 0 20 20" fill="none"><circle cx="10" cy="10" r="7" stroke="currentColor" stroke-width="1.4" opacity="0.7"/><path d="M10 6V10L13 12" stroke="currentColor" stroke-width="1.4" stroke-linecap="round"/></svg></div>
+</div>
+<div class="article-card__body">
+<p class="article-card__cat-tag tag-ai">AI &amp; Security</p>
+<h3 class="article-card__title"><a href="article-cloud-security.html" style="color:inherit;text-decoration:none;">Data Loss Prevention in the Generative AI Era: Protecting Sensitive Data When Employees Use LLM Tools</a></h3>
+<p class="article-card__excerpt">When employees paste internal data into public AI tools, it leaves the organization&rsquo;s control permanently. Traditional DLP solutions were not designed for this vector. We examine the policy, technical, and organizational controls required to govern AI tool usage without eliminating productivity gains.</p>
+<div class="article-card__footer">
+<span class="article-card__date">Feb 17, 2025</span>
+<span class="article-card__read">9 min &rarr;</span>
+</div>
+</div>
+</article><article class="article-card reveal reveal-delay-1" data-category="compliance">
+<div class="article-card__header">
+<div class="article-card__header-grid" aria-hidden="true"></div>
+<div class="article-card__header-accent cat-compliance" aria-hidden="true"></div>
+<div class="article-card__cat-icon"><svg viewBox="0 0 20 20" fill="none"><circle cx="10" cy="10" r="7" stroke="currentColor" stroke-width="1.4" opacity="0.7"/><path d="M10 6V10L13 12" stroke="currentColor" stroke-width="1.4" stroke-linecap="round"/></svg></div>
+</div>
+<div class="article-card__body">
+<p class="article-card__cat-tag tag-compliance">Compliance</p>
+<h3 class="article-card__title"><a href="article-hipaa-2025.html" style="color:inherit;text-decoration:none;">HIPAA Security Rule Modernization: What the 2025 Updates Require Healthcare Organizations to Change</a></h3>
+<p class="article-card__excerpt">The HHS Office for Civil Rights released proposed updates to the HIPAA Security Rule in early 2025, the first substantive revision since 2013. Changes mandate specific encryption standards, 72-hour breach notification timelines, and annual technical safeguard reviews.</p>
+<div class="article-card__footer">
+<span class="article-card__date">Feb 14, 2025</span>
+<span class="article-card__read">11 min &rarr;</span>
+</div>
+</div>
+</article><article class="article-card reveal reveal-delay-2" data-category="risk">
+<div class="article-card__header">
+<div class="article-card__header-grid" aria-hidden="true"></div>
+<div class="article-card__header-accent cat-risk" aria-hidden="true"></div>
+<div class="article-card__cat-icon"><svg viewBox="0 0 20 20" fill="none"><circle cx="10" cy="10" r="7" stroke="currentColor" stroke-width="1.4" opacity="0.7"/><path d="M10 6V10L13 12" stroke="currentColor" stroke-width="1.4" stroke-linecap="round"/></svg></div>
+</div>
+<div class="article-card__body">
+<p class="article-card__cat-tag tag-risk">Risk Management</p>
+<h3 class="article-card__title"><a href="article-cyber-insurance.html" style="color:inherit;text-decoration:none;">Cyber Insurance in 2025: What Underwriters Now Require and Why Coverage Is Shrinking</a></h3>
+<p class="article-card__excerpt">The cyber insurance market has fundamentally repriced risk. Carriers now require documented evidence of MFA, EDR, regular patching, and tested IR plans. Organizations without mature controls are finding premiums increase 40 to 80% or coverage is denied.</p>
+<div class="article-card__footer">
+<span class="article-card__date">Feb 10, 2025</span>
+<span class="article-card__read">8 min &rarr;</span>
+</div>
+</div>
+</article><article class="article-card reveal" data-category="cloud-security">
+<div class="article-card__header">
+<div class="article-card__header-grid" aria-hidden="true"></div>
+<div class="article-card__header-accent cat-cloud" aria-hidden="true"></div>
+<div class="article-card__cat-icon"><svg viewBox="0 0 20 20" fill="none"><circle cx="10" cy="10" r="7" stroke="currentColor" stroke-width="1.4" opacity="0.7"/><path d="M10 6V10L13 12" stroke="currentColor" stroke-width="1.4" stroke-linecap="round"/></svg></div>
+</div>
+<div class="article-card__body">
+<p class="article-card__cat-tag tag-cloud">Cloud Security</p>
+<h3 class="article-card__title"><a href="article-cloud-security.html" style="color:inherit;text-decoration:none;">Microsoft 365 Security: The Default Configurations Costing Organizations Their Data</a></h3>
+<p class="article-card__excerpt">M365 ships with security settings optimized for user convenience, not organizational protection. Disabled audit logging, legacy authentication protocols, and permissive OAuth app permissions are consistently present in organizations that have never conducted an M365 security review.</p>
+<div class="article-card__footer">
+<span class="article-card__date">Feb 6, 2025</span>
+<span class="article-card__read">10 min &rarr;</span>
+</div>
+</div>
+</article><article class="article-card reveal reveal-delay-1" data-category="threat-intelligence">
+<div class="article-card__header">
+<div class="article-card__header-grid" aria-hidden="true"></div>
+<div class="article-card__header-accent cat-threat" aria-hidden="true"></div>
+<div class="article-card__cat-icon"><svg viewBox="0 0 20 20" fill="none"><circle cx="10" cy="10" r="7" stroke="currentColor" stroke-width="1.4" opacity="0.7"/><path d="M10 6V10L13 12" stroke="currentColor" stroke-width="1.4" stroke-linecap="round"/></svg></div>
+</div>
+<div class="article-card__body">
+<p class="article-card__cat-tag tag-threat">Threat Intelligence</p>
+<h3 class="article-card__title"><a href="article-ransomware-2025.html" style="color:inherit;text-decoration:none;">Deepfake Social Engineering: How AI-Generated Audio and Video Are Enabling BEC at New Scale</a></h3>
+<p class="article-card__excerpt">BEC losses exceeded $3 billion in 2024. AI-generated voice and video deepfakes have removed the last layer of human verification organizations relied on, the phone call to confirm a wire transfer. We analyze documented deepfake fraud cases and the verification controls that defeat this attack class.</p>
+<div class="article-card__footer">
+<span class="article-card__date">Jan 30, 2025</span>
+<span class="article-card__read">9 min &rarr;</span>
+</div>
+</div>
+</article><article class="article-card reveal reveal-delay-2" data-category="incident-response">
+<div class="article-card__header">
+<div class="article-card__header-grid" aria-hidden="true"></div>
+<div class="article-card__header-accent cat-incident" aria-hidden="true"></div>
+<div class="article-card__cat-icon"><svg viewBox="0 0 20 20" fill="none"><circle cx="10" cy="10" r="7" stroke="currentColor" stroke-width="1.4" opacity="0.7"/><path d="M10 6V10L13 12" stroke="currentColor" stroke-width="1.4" stroke-linecap="round"/></svg></div>
+</div>
+<div class="article-card__body">
+<p class="article-card__cat-tag tag-incident">Incident Response</p>
+<h3 class="article-card__title"><a href="article-incident-response.html" style="color:inherit;text-decoration:none;">What to Look for in an Incident Response Retainer Before You Actually Need One</a></h3>
+<p class="article-card__excerpt">Organizations that sign IR retainer agreements before an incident spend less, recover faster, and experience fewer regulatory complications than those calling a vendor for the first time during a breach. We examine scope definitions, SLA commitments, and the contractual terms that determine whether your retainer will deliver in a crisis.</p>
+<div class="article-card__footer">
+<span class="article-card__date">Jan 27, 2025</span>
+<span class="article-card__read">7 min &rarr;</span>
+</div>
+</div>
+</article><article class="article-card reveal" data-category="compliance">
+<div class="article-card__header">
+<div class="article-card__header-grid" aria-hidden="true"></div>
+<div class="article-card__header-accent cat-compliance" aria-hidden="true"></div>
+<div class="article-card__cat-icon"><svg viewBox="0 0 20 20" fill="none"><circle cx="10" cy="10" r="7" stroke="currentColor" stroke-width="1.4" opacity="0.7"/><path d="M10 6V10L13 12" stroke="currentColor" stroke-width="1.4" stroke-linecap="round"/></svg></div>
+</div>
+<div class="article-card__body">
+<p class="article-card__cat-tag tag-compliance">Compliance</p>
+<h3 class="article-card__title"><a href="article-soc2.html" style="color:inherit;text-decoration:none;">NIST Cybersecurity Framework 2.0: What Changed, What It Means, and How to Update Your Program</a></h3>
+<p class="article-card__excerpt">NIST CSF 2.0 introduced a sixth function, Govern, and expanded beyond critical infrastructure to all organizations. We walk through every substantive change and provide a practical update roadmap for teams already using CSF 1.1.</p>
+<div class="article-card__footer">
+<span class="article-card__date">Jan 22, 2025</span>
+<span class="article-card__read">12 min &rarr;</span>
+</div>
+</div>
+</article><article class="article-card reveal reveal-delay-1" data-category="risk">
+<div class="article-card__header">
+<div class="article-card__header-grid" aria-hidden="true"></div>
+<div class="article-card__header-accent cat-risk" aria-hidden="true"></div>
+<div class="article-card__cat-icon"><svg viewBox="0 0 20 20" fill="none"><circle cx="10" cy="10" r="7" stroke="currentColor" stroke-width="1.4" opacity="0.7"/><path d="M10 6V10L13 12" stroke="currentColor" stroke-width="1.4" stroke-linecap="round"/></svg></div>
+</div>
+<div class="article-card__body">
+<p class="article-card__cat-tag tag-risk">Risk Management</p>
+<h3 class="article-card__title"><a href="article-third-party-risk.html" style="color:inherit;text-decoration:none;">Third-Party Risk Management: Why Your Vendors Are Your Most Significant and Least-Managed Security Liability</a></h3>
+<p class="article-card__excerpt">The majority of significant breaches in the past three years involved a third-party vendor as the initial access vector. Yet most organizations manage vendor security through annual questionnaires answered without verification. We outline a tiered TPRM program that actually reduces risk.</p>
+<div class="article-card__footer">
+<span class="article-card__date">Jan 18, 2025</span>
+<span class="article-card__read">10 min &rarr;</span>
+</div>
+</div>
+</article><article class="article-card reveal reveal-delay-2" data-category="executive-advisory">
+<div class="article-card__header">
+<div class="article-card__header-grid" aria-hidden="true"></div>
+<div class="article-card__header-accent cat-executive" aria-hidden="true"></div>
+<div class="article-card__cat-icon"><svg viewBox="0 0 20 20" fill="none"><circle cx="10" cy="10" r="7" stroke="currentColor" stroke-width="1.4" opacity="0.7"/><path d="M10 6V10L13 12" stroke="currentColor" stroke-width="1.4" stroke-linecap="round"/></svg></div>
+</div>
+<div class="article-card__body">
+<p class="article-card__cat-tag tag-executive">Executive Advisory</p>
+<h3 class="article-card__title"><a href="article-zero-trust.html" style="color:inherit;text-decoration:none;">How to Present Cyber Risk to Your Board Without Losing the Room or Oversimplifying the Problem</a></h3>
+<p class="article-card__excerpt">The frameworks that work, translating risk into financial exposure ranges, tying controls to business objectives, using heat maps that convey prioritization without requiring technical literacy, are different from what most security programs currently produce.</p>
+<div class="article-card__footer">
+<span class="article-card__date">Jan 14, 2025</span>
+<span class="article-card__read">8 min &rarr;</span>
+</div>
+</div>
+</article><article class="article-card reveal" data-category="identity">
+<div class="article-card__header">
+<div class="article-card__header-grid" aria-hidden="true"></div>
+<div class="article-card__header-accent cat-identity" aria-hidden="true"></div>
+<div class="article-card__cat-icon"><svg viewBox="0 0 20 20" fill="none"><circle cx="10" cy="10" r="7" stroke="currentColor" stroke-width="1.4" opacity="0.7"/><path d="M10 6V10L13 12" stroke="currentColor" stroke-width="1.4" stroke-linecap="round"/></svg></div>
+</div>
+<div class="article-card__body">
+<p class="article-card__cat-tag tag-identity">Identity &amp; Access</p>
+<h3 class="article-card__title"><a href="article-mfa-fatigue.html" style="color:inherit;text-decoration:none;">Identity Is the New Perimeter: Building an IAM Strategy That Matches How Your Organization Actually Operates</a></h3>
+<p class="article-card__excerpt">With workloads distributed across cloud providers, SaaS platforms, and remote endpoints, the network perimeter has collapsed. Identity is now the primary control plane, but most organizations&rsquo; identity infrastructure was built for an era of on-premises systems.</p>
+<div class="article-card__footer">
+<span class="article-card__date">Jan 10, 2025</span>
+<span class="article-card__read">11 min &rarr;</span>
+</div>
+</div>
+</article><article class="article-card reveal reveal-delay-1" data-category="compliance">
+<div class="article-card__header">
+<div class="article-card__header-grid" aria-hidden="true"></div>
+<div class="article-card__header-accent cat-compliance" aria-hidden="true"></div>
+<div class="article-card__cat-icon"><svg viewBox="0 0 20 20" fill="none"><circle cx="10" cy="10" r="7" stroke="currentColor" stroke-width="1.4" opacity="0.7"/><path d="M10 6V10L13 12" stroke="currentColor" stroke-width="1.4" stroke-linecap="round"/></svg></div>
+</div>
+<div class="article-card__body">
+<p class="article-card__cat-tag tag-compliance">Compliance</p>
+<h3 class="article-card__title"><a href="article-soc2.html" style="color:inherit;text-decoration:none;">SOC 2 Type II: A Realistic Timeline and Budget for Mid-Market Organizations Pursuing Certification</a></h3>
+<p class="article-card__excerpt">SOC 2 Type II is increasingly demanded by enterprise customers, investors, and cyber insurance underwriters. The path to achieving it is consistently underestimated in both time and resource requirements. We document a realistic 9 to 12 month roadmap.</p>
+<div class="article-card__footer">
+<span class="article-card__date">Jan 7, 2025</span>
+<span class="article-card__read">9 min &rarr;</span>
+</div>
+</div>
+</article><article class="article-card reveal reveal-delay-2" data-category="threat-intelligence">
+<div class="article-card__header">
+<div class="article-card__header-grid" aria-hidden="true"></div>
+<div class="article-card__header-accent cat-threat" aria-hidden="true"></div>
+<div class="article-card__cat-icon"><svg viewBox="0 0 20 20" fill="none"><circle cx="10" cy="10" r="7" stroke="currentColor" stroke-width="1.4" opacity="0.7"/><path d="M10 6V10L13 12" stroke="currentColor" stroke-width="1.4" stroke-linecap="round"/></svg></div>
+</div>
+<div class="article-card__body">
+<p class="article-card__cat-tag tag-threat">Threat Intelligence</p>
+<h3 class="article-card__title"><a href="article-ransomware-2025.html" style="color:inherit;text-decoration:none;">The Dark Web Economy: How Stolen Credentials Move From Initial Breach to Operational Criminal Infrastructure</a></h3>
+<p class="article-card__excerpt">Understanding how stolen credentials are monetized after a breach is essential intelligence. Initial access brokers, credential marketplaces, and ransomware-as-a-service platforms form an interconnected economy that moves data from breach to exploitation within hours.</p>
+<div class="article-card__footer">
+<span class="article-card__date">Dec 30, 2024</span>
+<span class="article-card__read">13 min &rarr;</span>
+</div>
+</div>
+</article><article class="article-card reveal" data-category="cloud-security">
+<div class="article-card__header">
+<div class="article-card__header-grid" aria-hidden="true"></div>
+<div class="article-card__header-accent cat-app" aria-hidden="true"></div>
+<div class="article-card__cat-icon"><svg viewBox="0 0 20 20" fill="none"><circle cx="10" cy="10" r="7" stroke="currentColor" stroke-width="1.4" opacity="0.7"/><path d="M10 6V10L13 12" stroke="currentColor" stroke-width="1.4" stroke-linecap="round"/></svg></div>
+</div>
+<div class="article-card__body">
+<p class="article-card__cat-tag tag-app">Application Security</p>
+<h3 class="article-card__title"><a href="article-cloud-security.html" style="color:inherit;text-decoration:none;">API Security: The Expanding Attack Surface That Security Teams Are Consistently Underprioritizing</a></h3>
+<p class="article-card__excerpt">APIs account for more than 80% of internet traffic. OWASP&rsquo;s API Security Top 10 documents the most consistently exploited vulnerabilities, from broken object-level authorization to unrestricted resource consumption, that organizations systematically fail to address during development and deployment.</p>
+<div class="article-card__footer">
+<span class="article-card__date">Dec 23, 2024</span>
+<span class="article-card__read">10 min &rarr;</span>
+</div>
+</div>
+</article><article class="article-card reveal reveal-delay-1" data-category="risk">
+<div class="article-card__header">
+<div class="article-card__header-grid" aria-hidden="true"></div>
+<div class="article-card__header-accent cat-supply" aria-hidden="true"></div>
+<div class="article-card__cat-icon"><svg viewBox="0 0 20 20" fill="none"><circle cx="10" cy="10" r="7" stroke="currentColor" stroke-width="1.4" opacity="0.7"/><path d="M10 6V10L13 12" stroke="currentColor" stroke-width="1.4" stroke-linecap="round"/></svg></div>
+</div>
+<div class="article-card__body">
+<p class="article-card__cat-tag tag-supply">Supply Chain</p>
+<h3 class="article-card__title"><a href="article-third-party-risk.html" style="color:inherit;text-decoration:none;">Software Supply Chain Security: Building Visibility Into the Code and Dependencies Your Organization Actually Runs</a></h3>
+<p class="article-card__excerpt">The SolarWinds, Log4Shell, and XZ Utils incidents demonstrated that adversaries targeting software supply chains can achieve access that direct attacks cannot match. SBOMs, dependency scanning, and build pipeline integrity controls are no longer optional.</p>
+<div class="article-card__footer">
+<span class="article-card__date">Dec 18, 2024</span>
+<span class="article-card__read">11 min &rarr;</span>
+</div>
+</div>
+</article><article class="article-card reveal reveal-delay-2" data-category="executive-advisory">
+<div class="article-card__header">
+<div class="article-card__header-grid" aria-hidden="true"></div>
+<div class="article-card__header-accent cat-executive" aria-hidden="true"></div>
+<div class="article-card__cat-icon"><svg viewBox="0 0 20 20" fill="none"><circle cx="10" cy="10" r="7" stroke="currentColor" stroke-width="1.4" opacity="0.7"/><path d="M10 6V10L13 12" stroke="currentColor" stroke-width="1.4" stroke-linecap="round"/></svg></div>
+</div>
+<div class="article-card__body">
+<p class="article-card__cat-tag tag-executive">Executive Advisory</p>
+<h3 class="article-card__title"><a href="article-cyber-insurance.html" style="color:inherit;text-decoration:none;">The vCISO Model: When Fractional Security Leadership Delivers More Value Than a Full-Time Hire</a></h3>
+<p class="article-card__excerpt">The fully-loaded cost of a senior CISO exceeds $400,000 annually in most markets. Fractional CISO engagements, when structured correctly, provide the strategic direction, executive credibility, and program accountability that growing organizations need at a fraction of the cost.</p>
+<div class="article-card__footer">
+<span class="article-card__date">Dec 12, 2024</span>
+<span class="article-card__read">7 min &rarr;</span>
+</div>
+</div>
+</article><article class="article-card reveal" data-category="ai-security">
+<div class="article-card__header">
+<div class="article-card__header-grid" aria-hidden="true"></div>
+<div class="article-card__header-accent cat-ai" aria-hidden="true"></div>
+<div class="article-card__cat-icon"><svg viewBox="0 0 20 20" fill="none"><circle cx="10" cy="10" r="7" stroke="currentColor" stroke-width="1.4" opacity="0.7"/><path d="M10 6V10L13 12" stroke="currentColor" stroke-width="1.4" stroke-linecap="round"/></svg></div>
+</div>
+<div class="article-card__body">
+<p class="article-card__cat-tag tag-ai">AI &amp; Security</p>
+<h3 class="article-card__title"><a href="article-cloud-security.html" style="color:inherit;text-decoration:none;">Securing AI Systems in Production: What Security Teams Need to Know About LLM Vulnerabilities</a></h3>
+<p class="article-card__excerpt">As organizations deploy internal AI tools, the attack surface expands in ways traditional security frameworks do not address. Prompt injection, training data poisoning, and insecure plugin architectures represent new vulnerability classes. OWASP&rsquo;s LLM Top 10 provides the foundation, we extend it into operational guidance.</p>
+<div class="article-card__footer">
+<span class="article-card__date">Dec 8, 2024</span>
+<span class="article-card__read">12 min &rarr;</span>
+</div>
+</div>
+</article><article class="article-card reveal reveal-delay-1" data-category="zero-trust">
+<div class="article-card__header">
+<div class="article-card__header-grid" aria-hidden="true"></div>
+<div class="article-card__header-accent cat-zerotrust" aria-hidden="true"></div>
+<div class="article-card__cat-icon"><svg viewBox="0 0 20 20" fill="none"><circle cx="10" cy="10" r="7" stroke="currentColor" stroke-width="1.4" opacity="0.7"/><path d="M10 6V10L13 12" stroke="currentColor" stroke-width="1.4" stroke-linecap="round"/></svg></div>
+</div>
+<div class="article-card__body">
+<p class="article-card__cat-tag tag-zerotrust">Zero Trust</p>
+<h3 class="article-card__title"><a href="article-zero-trust.html" style="color:inherit;text-decoration:none;">Micro-Segmentation in Practice: Network Architectures That Actually Contain Lateral Movement</a></h3>
+<p class="article-card__excerpt">Lateral movement remains the central technique in nearly every significant breach. Micro-segmentation, implemented at the workload level, eliminates the attacker&rsquo;s freedom of movement. We provide an implementation guide from policy definition through enforcement validation.</p>
+<div class="article-card__footer">
+<span class="article-card__date">Dec 3, 2024</span>
+<span class="article-card__read">13 min &rarr;</span>
+</div>
+</div>
+</article><article class="article-card reveal reveal-delay-2" data-category="incident-response">
+<div class="article-card__header">
+<div class="article-card__header-grid" aria-hidden="true"></div>
+<div class="article-card__header-accent cat-incident" aria-hidden="true"></div>
+<div class="article-card__cat-icon"><svg viewBox="0 0 20 20" fill="none"><circle cx="10" cy="10" r="7" stroke="currentColor" stroke-width="1.4" opacity="0.7"/><path d="M10 6V10L13 12" stroke="currentColor" stroke-width="1.4" stroke-linecap="round"/></svg></div>
+</div>
+<div class="article-card__body">
+<p class="article-card__cat-tag tag-incident">Incident Response</p>
+<h3 class="article-card__title"><a href="article-incident-response.html" style="color:inherit;text-decoration:none;">Tabletop Exercises That Actually Prepare Organizations: Designing Scenarios That Surface Real Capability Gaps</a></h3>
+<p class="article-card__excerpt">Most tabletop exercises confirm that organizations have an IR plan, not that they can execute under pressure. The scenarios that build genuine organizational capability are adversarially realistic and force cross-functional decision-making under time pressure.</p>
+<div class="article-card__footer">
+<span class="article-card__date">Nov 26, 2024</span>
+<span class="article-card__read">8 min &rarr;</span>
+</div>
+</div>
+</article><article class="article-card reveal" data-category="risk">
+<div class="article-card__header">
+<div class="article-card__header-grid" aria-hidden="true"></div>
+<div class="article-card__header-accent cat-risk" aria-hidden="true"></div>
+<div class="article-card__cat-icon"><svg viewBox="0 0 20 20" fill="none"><circle cx="10" cy="10" r="7" stroke="currentColor" stroke-width="1.4" opacity="0.7"/><path d="M10 6V10L13 12" stroke="currentColor" stroke-width="1.4" stroke-linecap="round"/></svg></div>
+</div>
+<div class="article-card__body">
+<p class="article-card__cat-tag tag-risk">Risk Management</p>
+<h3 class="article-card__title"><a href="article-cyber-insurance.html" style="color:inherit;text-decoration:none;">Cybersecurity M&amp;A Due Diligence: The Technical and Program Assessment Every Acquirer Should Conduct Before Close</a></h3>
+<p class="article-card__excerpt">Acquiring an organization with undisclosed security liabilities transfers those liabilities to the acquirer at close. A structured cybersecurity due diligence assessment identifies material risks before deal completion and informs purchase price negotiations.</p>
+<div class="article-card__footer">
+<span class="article-card__date">Nov 20, 2024</span>
+<span class="article-card__read">10 min &rarr;</span>
+</div>
+</div>
+</article><article class="article-card reveal reveal-delay-1" data-category="cloud-security">
+<div class="article-card__header">
+<div class="article-card__header-grid" aria-hidden="true"></div>
+<div class="article-card__header-accent cat-cloud" aria-hidden="true"></div>
+<div class="article-card__cat-icon"><svg viewBox="0 0 20 20" fill="none"><circle cx="10" cy="10" r="7" stroke="currentColor" stroke-width="1.4" opacity="0.7"/><path d="M10 6V10L13 12" stroke="currentColor" stroke-width="1.4" stroke-linecap="round"/></svg></div>
+</div>
+<div class="article-card__body">
+<p class="article-card__cat-tag tag-cloud">Cloud Security</p>
+<h3 class="article-card__title"><a href="article-cloud-security.html" style="color:inherit;text-decoration:none;">Kubernetes and Container Security: The Deployment Configurations That Consistently Lead to Compromise</a></h3>
+<p class="article-card__excerpt">Kubernetes complexity creates a security configuration surface that most DevOps teams have not fully addressed. Privileged containers, exposed dashboards, and overpermissive service accounts represent control failures responsible for the majority of container environment compromises.</p>
+<div class="article-card__footer">
+<span class="article-card__date">Nov 15, 2024</span>
+<span class="article-card__read">11 min &rarr;</span>
+</div>
+</div>
+</article><article class="article-card reveal reveal-delay-2" data-category="executive-advisory">
+<div class="article-card__header">
+<div class="article-card__header-grid" aria-hidden="true"></div>
+<div class="article-card__header-accent cat-executive" aria-hidden="true"></div>
+<div class="article-card__cat-icon"><svg viewBox="0 0 20 20" fill="none"><circle cx="10" cy="10" r="7" stroke="currentColor" stroke-width="1.4" opacity="0.7"/><path d="M10 6V10L13 12" stroke="currentColor" stroke-width="1.4" stroke-linecap="round"/></svg></div>
+</div>
+<div class="article-card__body">
+<p class="article-card__cat-tag tag-executive">Executive Advisory</p>
+<h3 class="article-card__title"><a href="article-zero-trust.html" style="color:inherit;text-decoration:none;">Security Awareness Training Is Broken, Here Is What the Research Says Actually Changes Human Behavior</a></h3>
+<p class="article-card__excerpt">Annual security awareness training completion rates are high and incident rates from human error remain consistent. Research on behavior change points toward just-in-time education triggered by risky behavior and positive reinforcement structures.</p>
+<div class="article-card__footer">
+<span class="article-card__date">Nov 10, 2024</span>
+<span class="article-card__read">9 min &rarr;</span>
+</div>
+</div>
+</article><article class="article-card reveal" data-category="compliance">
+<div class="article-card__header">
+<div class="article-card__header-grid" aria-hidden="true"></div>
+<div class="article-card__header-accent cat-compliance" aria-hidden="true"></div>
+<div class="article-card__cat-icon"><svg viewBox="0 0 20 20" fill="none"><circle cx="10" cy="10" r="7" stroke="currentColor" stroke-width="1.4" opacity="0.7"/><path d="M10 6V10L13 12" stroke="currentColor" stroke-width="1.4" stroke-linecap="round"/></svg></div>
+</div>
+<div class="article-card__body">
+<p class="article-card__cat-tag tag-compliance">Compliance</p>
+<h3 class="article-card__title"><a href="article-soc2.html" style="color:inherit;text-decoration:none;">NIS2 and DORA: What US Organizations With EU Operations Must Understand Now</a></h3>
+<p class="article-card__excerpt">NIS2 entered enforcement in October 2024. DORA becomes fully applicable in January 2025 for financial entities. Together they impose incident reporting obligations, third-party risk management requirements, and senior management accountability for affected organizations.</p>
+<div class="article-card__footer">
+<span class="article-card__date">Nov 5, 2024</span>
+<span class="article-card__read">12 min &rarr;</span>
+</div>
+</div>
+</article><article class="article-card reveal reveal-delay-1" data-category="threat-intelligence">
+<div class="article-card__header">
+<div class="article-card__header-grid" aria-hidden="true"></div>
+<div class="article-card__header-accent cat-threat" aria-hidden="true"></div>
+<div class="article-card__cat-icon"><svg viewBox="0 0 20 20" fill="none"><circle cx="10" cy="10" r="7" stroke="currentColor" stroke-width="1.4" opacity="0.7"/><path d="M10 6V10L13 12" stroke="currentColor" stroke-width="1.4" stroke-linecap="round"/></svg></div>
+</div>
+<div class="article-card__body">
+<p class="article-card__cat-tag tag-threat">Threat Intelligence</p>
+<h3 class="article-card__title"><a href="article-ransomware-2025.html" style="color:inherit;text-decoration:none;">Threat Intelligence Programs: Building an Operational Capability That Actually Informs Defensive Decisions</a></h3>
+<p class="article-card__excerpt">Most organizations that have threat intelligence have a feed that generates alerts their team cannot act on. A mature threat intelligence program requires a fundamentally different design. We document the collection strategy and production workflow that creates intelligence your teams can operationalize.</p>
+<div class="article-card__footer">
+<span class="article-card__date">Oct 30, 2024</span>
+<span class="article-card__read">11 min &rarr;</span>
+</div>
+</div>
+</article><article class="article-card reveal reveal-delay-2" data-category="zero-trust">
+<div class="article-card__header">
+<div class="article-card__header-grid" aria-hidden="true"></div>
+<div class="article-card__header-accent cat-zerotrust" aria-hidden="true"></div>
+<div class="article-card__cat-icon"><svg viewBox="0 0 20 20" fill="none"><circle cx="10" cy="10" r="7" stroke="currentColor" stroke-width="1.4" opacity="0.7"/><path d="M10 6V10L13 12" stroke="currentColor" stroke-width="1.4" stroke-linecap="round"/></svg></div>
+</div>
+<div class="article-card__body">
+<p class="article-card__cat-tag tag-zerotrust">Zero Trust</p>
+<h3 class="article-card__title"><a href="article-mfa-fatigue.html" style="color:inherit;text-decoration:none;">Privileged Access Management in 2025: Why PAM Remains the Highest-Leverage Control in Any Security Program</a></h3>
+<p class="article-card__excerpt">In virtually every post-incident analysis of a significant breach, the turning point to catastrophic compromise is the acquisition of privileged credentials. PAM, when implemented beyond just password vaulting to include just-in-time provisioning and session recording, dramatically reduces attacker capability.</p>
+<div class="article-card__footer">
+<span class="article-card__date">Oct 24, 2024</span>
+<span class="article-card__read">10 min &rarr;</span>
+</div>
+</div>
+</article><article class="article-card reveal" data-category="risk">
+<div class="article-card__header">
+<div class="article-card__header-grid" aria-hidden="true"></div>
+<div class="article-card__header-accent cat-ot" aria-hidden="true"></div>
+<div class="article-card__cat-icon"><svg viewBox="0 0 20 20" fill="none"><circle cx="10" cy="10" r="7" stroke="currentColor" stroke-width="1.4" opacity="0.7"/><path d="M10 6V10L13 12" stroke="currentColor" stroke-width="1.4" stroke-linecap="round"/></svg></div>
+</div>
+<div class="article-card__body">
+<p class="article-card__cat-tag tag-threat">OT &amp; ICS Security</p>
+<h3 class="article-card__title"><a href="article-third-party-risk.html" style="color:inherit;text-decoration:none;">Operational Technology Security: Protecting Industrial and Manufacturing Environments</a></h3>
+<p class="article-card__excerpt">The convergence of IT and OT networks has exposed industrial control systems to a threat landscape they were never designed to face. Nation-state actors and criminal groups have demonstrated capability to target critical infrastructure with consequences far beyond data theft.</p>
+<div class="article-card__footer">
+<span class="article-card__date">Oct 18, 2024</span>
+<span class="article-card__read">12 min &rarr;</span>
+</div>
+</div>
+</article><article class="article-card reveal reveal-delay-1" data-category="executive-advisory">
+<div class="article-card__header">
+<div class="article-card__header-grid" aria-hidden="true"></div>
+<div class="article-card__header-accent cat-executive" aria-hidden="true"></div>
+<div class="article-card__cat-icon"><svg viewBox="0 0 20 20" fill="none"><circle cx="10" cy="10" r="7" stroke="currentColor" stroke-width="1.4" opacity="0.7"/><path d="M10 6V10L13 12" stroke="currentColor" stroke-width="1.4" stroke-linecap="round"/></svg></div>
+</div>
+<div class="article-card__body">
+<p class="article-card__cat-tag tag-executive">Executive Advisory</p>
+<h3 class="article-card__title"><a href="article-soc2.html" style="color:inherit;text-decoration:none;">Building a Security Program From Scratch: A Leadership-Level Guide for Organizations at the Starting Line</a></h3>
+<p class="article-card__excerpt">Organizations building a formal security program for the first time face a disorienting array of frameworks and vendor pitches. The correct starting point is a clear understanding of what you are protecting and what your actual risk exposure is.</p>
+<div class="article-card__footer">
+<span class="article-card__date">Oct 12, 2024</span>
+<span class="article-card__read">14 min &rarr;</span>
+</div>
+</div>
+</article>
+
+        <article class="article-card reveal" data-category="identity">
+          <div class="article-card__header"><div class="article-card__header-accent cat-identity" aria-hidden="true"></div></div>
+          <div class="article-card__body">
+            <p class="article-card__cat-tag tag-identity">Identity &amp; Access</p>
+            <h3 class="article-card__title"><a href="article-passkeys.html" style="color:inherit;text-decoration:none;">Passkeys Are Replacing Passwords: What Security Teams Need to Implement Now</a></h3>
+            <p class="article-card__excerpt">FIDO2 passkeys have reached critical mass in 2026. Apple, Google, and Microsoft support is complete. Security teams now have a real window to eliminate credential-based attack vectors for good.</p>
+            <div class="article-card__footer"><span class="article-card__date">Mar 15, 2026</span><span class="article-card__read">8 min &rarr;</span></div>
+          </div>
+        </article>
+        <article class="article-card reveal reveal-delay-1" data-category="ai-security">
+          <div class="article-card__header"><div class="article-card__header-accent cat-ai" aria-hidden="true"></div></div>
+          <div class="article-card__body">
+            <p class="article-card__cat-tag tag-ai">AI &amp; Security</p>
+            <h3 class="article-card__title"><a href="article-ai-security-ops.html" style="color:inherit;text-decoration:none;">How Security Teams Are Using AI to Detect Threats Faster and Reduce Analyst Burnout</a></h3>
+            <p class="article-card__excerpt">AI is delivering real gains in security operations in 2026. Alert triage automation, natural language threat hunting, and behavioral anomaly detection are all production-ready today.</p>
+            <div class="article-card__footer"><span class="article-card__date">Mar 10, 2026</span><span class="article-card__read">9 min &rarr;</span></div>
+          </div>
+        </article>
+        <article class="article-card reveal reveal-delay-2" data-category="threat-intelligence">
+          <div class="article-card__header"><div class="article-card__header-accent cat-threat" aria-hidden="true"></div></div>
+          <div class="article-card__body">
+            <p class="article-card__cat-tag tag-threat">Threat Intelligence</p>
+            <h3 class="article-card__title"><a href="article-deepfake-fraud-2026.html" style="color:inherit;text-decoration:none;">Deepfake Fraud in 2026: AI Audio and Video Are Changing What Social Engineering Looks Like</a></h3>
+            <p class="article-card__excerpt">Real-time AI voice synthesis is now indistinguishable in phone quality audio. The verification controls organizations relied on for decades no longer hold against capable fraud actors.</p>
+            <div class="article-card__footer"><span class="article-card__date">Mar 1, 2026</span><span class="article-card__read">9 min &rarr;</span></div>
+          </div>
+        </article>
+        <article class="article-card reveal" data-category="threat-intelligence">
+          <div class="article-card__header"><div class="article-card__header-accent cat-ot" aria-hidden="true"></div></div>
+          <div class="article-card__body">
+            <p class="article-card__cat-tag tag-threat">Threat Intelligence</p>
+            <h3 class="article-card__title"><a href="article-ot-security-2026.html" style="color:inherit;text-decoration:none;">Critical Infrastructure Under Attack: The OT and ICS Threat Landscape in 2026</a></h3>
+            <p class="article-card__excerpt">Nation-state threat actors are pre-positioning in critical infrastructure environments. Industrial control systems designed for isolation are now connected to enterprise networks and the internet.</p>
+            <div class="article-card__footer"><span class="article-card__date">Feb 12, 2026</span><span class="article-card__read">11 min &rarr;</span></div>
+          </div>
+        </article>
+        <article class="article-card reveal reveal-delay-1" data-category="executive-advisory">
+          <div class="article-card__header"><div class="article-card__header-accent cat-executive" aria-hidden="true"></div></div>
+          <div class="article-card__body">
+            <p class="article-card__cat-tag tag-executive">Executive Advisory</p>
+            <h3 class="article-card__title"><a href="article-sec-disclosure.html" style="color:inherit;text-decoration:none;">SEC Cybersecurity Disclosure Rules: What Public Companies Must Report and When</a></h3>
+            <p class="article-card__excerpt">One year into the SEC rules, compliance challenges are clear. The four-business-day materiality determination timeline is the most demanding requirement for public companies to get right.</p>
+            <div class="article-card__footer"><span class="article-card__date">Feb 5, 2026</span><span class="article-card__read">9 min &rarr;</span></div>
+          </div>
+        </article>
+        <article class="article-card reveal reveal-delay-2" data-category="risk">
+          <div class="article-card__header"><div class="article-card__header-accent cat-risk" aria-hidden="true"></div></div>
+          <div class="article-card__body">
+            <p class="article-card__cat-tag tag-risk">Risk Management</p>
+            <h3 class="article-card__title"><a href="article-cisa-kev.html" style="color:inherit;text-decoration:none;">The CISA Known Exploited Vulnerabilities Catalog: How to Use It to Prioritize What Gets Patched</a></h3>
+            <p class="article-card__excerpt">KEV lists CVEs actively exploited in the wild. Used correctly it transforms vulnerability management from a volume problem into a risk-based program focused on what adversaries actually use.</p>
+            <div class="article-card__footer"><span class="article-card__date">Feb 20, 2026</span><span class="article-card__read">7 min &rarr;</span></div>
+          </div>
+        </article>
+        <article class="article-card reveal" data-category="identity">
+          <div class="article-card__header"><div class="article-card__header-accent cat-identity" aria-hidden="true"></div></div>
+          <div class="article-card__body">
+            <p class="article-card__cat-tag tag-identity">Identity &amp; Access</p>
+            <h3 class="article-card__title"><a href="article-itdr.html" style="color:inherit;text-decoration:none;">Identity Threat Detection and Response: Why ITDR Is the Security Category Every Organization Needs Now</a></h3>
+            <p class="article-card__excerpt">Identity-based attacks targeting Active Directory and Entra ID are behind the majority of serious breaches. ITDR provides the detection and response capability standard tools miss.</p>
+            <div class="article-card__footer"><span class="article-card__date">Jan 28, 2026</span><span class="article-card__read">8 min &rarr;</span></div>
+          </div>
+        </article>
+        <article class="article-card reveal reveal-delay-1" data-category="risk">
+          <div class="article-card__header"><div class="article-card__header-accent cat-supply" aria-hidden="true"></div></div>
+          <div class="article-card__body">
+            <p class="article-card__cat-tag tag-risk">Risk Management</p>
+            <h3 class="article-card__title"><a href="article-shadow-it.html" style="color:inherit;text-decoration:none;">Shadow IT and SaaS Sprawl: Managing the Security Risk of Technology Your Team Did Not Approve</a></h3>
+            <p class="article-card__excerpt">The average enterprise uses hundreds of SaaS applications, most undiscovered by the security team. Shadow IT creates data exposure, compliance gaps, and attack surface that traditional tools miss.</p>
+            <div class="article-card__footer"><span class="article-card__date">Dec 10, 2025</span><span class="article-card__read">8 min &rarr;</span></div>
+          </div>
+        </article>
+        <article class="article-card reveal reveal-delay-2" data-category="executive-advisory">
+          <div class="article-card__header"><div class="article-card__header-accent cat-executive" aria-hidden="true"></div></div>
+          <div class="article-card__body">
+            <p class="article-card__cat-tag tag-executive">Executive Advisory</p>
+            <h3 class="article-card__title"><a href="article-pe-portfolio-security.html" style="color:inherit;text-decoration:none;">Cybersecurity for Private Equity Portfolio Companies: A Framework That Protects Value</a></h3>
+            <p class="article-card__excerpt">PE-backed companies face security risks that are underassessed in due diligence and undermanaged post-acquisition. A structured approach protects deal value at every stage.</p>
+            <div class="article-card__footer"><span class="article-card__date">Nov 18, 2025</span><span class="article-card__read">10 min &rarr;</span></div>
+          </div>
+        </article>
+        <article class="article-card reveal" data-category="executive-advisory">
+          <div class="article-card__header"><div class="article-card__header-accent cat-executive" aria-hidden="true"></div></div>
+          <div class="article-card__body">
+            <p class="article-card__cat-tag tag-executive">Executive Advisory</p>
+            <h3 class="article-card__title"><a href="article-security-metrics.html" style="color:inherit;text-decoration:none;">How to Measure Security Program Effectiveness: The Metrics That Actually Tell You Something</a></h3>
+            <p class="article-card__excerpt">Most security metrics measure activity, not outcomes. MTTD, MTTR, detection coverage, and remediation SLA compliance tell you whether your security program is actually reducing risk.</p>
+            <div class="article-card__footer"><span class="article-card__date">Oct 22, 2025</span><span class="article-card__read">8 min &rarr;</span></div>
+          </div>
+        </article>
+</div> <div class="hub-newsletter reveal">
+<div class="hub-newsletter__copy">
+<h3 class="hub-newsletter__title">Stay Current on What Matters</h3>
+<p class="hub-newsletter__body">Cybersecurity intelligence delivered to senior security and executive leaders, no noise, no vendor pitches, no filler. Published monthly by the YGH Tech Advisory Team.</p>
+</div>
+<div class="hub-newsletter__form">
+<input type="email" class="hub-newsletter__input" placeholder="your@company.com" aria-label="Email for newsletter"/>
+<button class="btn btn-primary" onclick="handleNewsletterSignup(this)">Subscribe</button>
+</div>
+</div> </div>
+</section>
+<footer class="footer" role="contentinfo">
+<div class="container">
+<div class="footer__grid">
+
+<div class="footer__brand-col">
+<a href="index.html"><img src="logo.jpg" alt="YGH Tech" style="height:90px;width:auto;display:block;"></a>
+</div>
+
+<div class="footer__cols-group">
+<div>
+<h3 class="footer__col-title">Navigate</h3>
+<ul class="footer__links">
+<li><a href="index.html"      class="footer__link">Home</a></li>
+<li><a href="services.html"   class="footer__link">Services</a></li>
+<li><a href="why-us.html"     class="footer__link">Why Us</a></li>
+<li><a href="industries.html" class="footer__link">Industries</a></li>
+<li><a href="process.html"    class="footer__link">Our Process</a></li>
+</ul>
+</div>
+
+<div>
+<h3 class="footer__col-title">Explore</h3>
+<ul class="footer__links">
+<li><a href="about.html" class="footer__link">About</a></li>
+<li><a href="hub.html"   class="footer__link">The Hub</a></li>
+</ul>
+</div>
+
+<div>
+<h3 class="footer__col-title">Connect</h3>
+<ul class="footer__links">
+<li><a href="contact.html" class="footer__link">Contact Us</a></li>
+<li><a href="#"            class="footer__link">Privacy Policy</a></li>
+</ul>
+</div>
+</div>
+
+</div>
+<div class="footer__bottom">
+<p class="footer__copy">&copy; 2025 YGH Tech. All rights reserved.</p>
+</div>
+</div>
+</footer>
+<script>
+/* ============================================================
+   YGH TECH — MAIN JAVASCRIPT
+   ============================================================
+   Sections:
+   1. Navigation (sticky, hamburger, active links)
+   2. Scroll Reveal Animations
+   3. Hero Panel Animations
+   4. FAQ Accordion
+   5. Contact Form Validation
+   6. Counter Animations (stats)
+   7. Process Step Highlights
+   ============================================================ */
+
+'use strict';
+
+/* ============================================================
+   1. NAVIGATION
+   ============================================================ */
+const nav         = document.querySelector('.nav');
+const hamburger   = document.querySelector('.hamburger');
+const mobileNav   = document.querySelector('.nav__mobile');
+const navLinks    = document.querySelectorAll('.nav__link, .nav__mobile-link');
+let   mobileOpen  = false;
+
+// Sticky nav + scroll class
+function handleNavScroll() {
+  if (!nav) return;
+  if (window.scrollY > 20) {
+    nav.classList.add('scrolled');
+  } else {
+    nav.classList.remove('scrolled');
+  }
+}
+window.addEventListener('scroll', handleNavScroll, { passive: true });
+handleNavScroll();
+
+// Hamburger toggle
+if (hamburger && mobileNav) {
+  hamburger.addEventListener('click', () => {
+    mobileOpen = !mobileOpen;
+    hamburger.classList.toggle('open', mobileOpen);
+    if (mobileOpen) {
+      mobileNav.style.display = 'flex';
+      requestAnimationFrame(() => mobileNav.classList.add('open'));
+    } else {
+      mobileNav.classList.remove('open');
+      setTimeout(() => { mobileNav.style.display = ''; }, 350);
+    }
+    document.body.style.overflow = mobileOpen ? 'hidden' : '';
+  });
+}
+
+// Close mobile nav on link click
+navLinks.forEach(link => {
+  link.addEventListener('click', () => {
+    if (mobileOpen) {
+      mobileOpen = false;
+      hamburger?.classList.remove('open');
+      mobileNav?.classList.remove('open');
+      setTimeout(() => { if (mobileNav) mobileNav.style.display = ''; }, 350);
+      document.body.style.overflow = '';
+    }
+  });
+});
+
+// Active link based on current page
+(function setActiveLink() {
+  const path = window.location.pathname.split('/').pop() || 'index.html';
+  document.querySelectorAll('.nav__link, .nav__mobile-link').forEach(link => {
+    const href = link.getAttribute('href');
+    if (href === path || (path === '' && href === 'index.html')) {
+      link.classList.add('active');
+    }
+  });
+})();
+
+
+/* ============================================================
+   2. SCROLL REVEAL ANIMATIONS
+   ============================================================ */
+function initScrollReveal() {
+  const elements = document.querySelectorAll('.reveal');
+  if (!elements.length) return;
+
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('revealed');
+        observer.unobserve(entry.target);
+      }
+    });
+  }, {
+    threshold: 0.08,
+    rootMargin: '0px 0px -40px 0px'
+  });
+
+  elements.forEach(el => observer.observe(el));
+}
+
+
+/* ============================================================
+   3. HERO PANEL ANIMATIONS
+   ============================================================ */
+function initHeroPanel() {
+  // Animate risk meter bars on load
+  setTimeout(() => {
+    const fills = document.querySelectorAll('.risk-high .risk-meter__fill');
+    const medFills = document.querySelectorAll('.risk-medium .risk-meter__fill');
+    const lowFills = document.querySelectorAll('.risk-low .risk-meter__fill');
+
+    fills.forEach(f    => { f.style.width = '72%'; });
+    medFills.forEach(f => { f.style.width = '45%'; });
+    lowFills.forEach(f => { f.style.width = '18%'; });
+  }, 600);
+}
+
+
+/* ============================================================
+   4. FAQ ACCORDION
+   ============================================================ */
+function initFAQ() {
+  const items = document.querySelectorAll('.faq-item');
+  if (!items.length) return;
+
+  items.forEach(item => {
+    const question = item.querySelector('.faq-question');
+    if (!question) return;
+
+    question.addEventListener('click', () => {
+      const isOpen = item.classList.contains('open');
+      // Close all
+      items.forEach(i => i.classList.remove('open'));
+      // Open clicked if it wasn't open
+      if (!isOpen) item.classList.add('open');
+    });
+  });
+}
+
+
+/* ============================================================
+   5. CONTACT FORM VALIDATION
+   ============================================================ */
+function initContactForm() {
+  const form = document.getElementById('consultationForm');
+  if (!form) return;
+
+  const successMsg = document.getElementById('formSuccess');
+
+  // Validation rules — EDIT to adjust requirements
+  const rules = {
+    fullName:    { required: true, minLength: 2,  message: 'Please enter your full name.' },
+    company:     { required: true, minLength: 2,  message: 'Please enter your company name.' },
+    email:       { required: true, email: true,   message: 'Please enter a valid email address.' },
+    phone:       { required: false, phone: true,  message: 'Please enter a valid phone number.' },
+    service:     { required: true,                message: 'Please select a service.' },
+    companySize: { required: true,                message: 'Please select your company size.' },
+    message:     { required: true, minLength: 20, message: 'Please describe your needs (at least 20 characters).' },
+  };
+
+  function validateField(name, value) {
+    const rule = rules[name];
+    if (!rule) return null;
+    if (rule.required && !value.trim()) return rule.message;
+    if (rule.minLength && value.trim().length < rule.minLength) return rule.message;
+    if (rule.email && !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(value)) return rule.message;
+    if (rule.phone && value.trim() && !/^[\d\s\+\-\(\)\.]{7,20}$/.test(value.trim())) return rule.message;
+    return null;
+  }
+
+  function showError(input, message) {
+    input.classList.add('error');
+    const errEl = input.parentNode.querySelector('.form-error');
+    if (errEl) { errEl.textContent = message; errEl.classList.add('visible'); }
+  }
+
+  function clearError(input) {
+    input.classList.remove('error');
+    const errEl = input.parentNode.querySelector('.form-error');
+    if (errEl) { errEl.textContent = ''; errEl.classList.remove('visible'); }
+  }
+
+  // Live validation on blur
+  form.querySelectorAll('[name]').forEach(input => {
+    input.addEventListener('blur', () => {
+      const error = validateField(input.name, input.value);
+      if (error) showError(input, error);
+      else clearError(input);
+    });
+    input.addEventListener('input', () => {
+      if (input.classList.contains('error')) {
+        const error = validateField(input.name, input.value);
+        if (!error) clearError(input);
+      }
+    });
+  });
+
+  // Submit
+  form.addEventListener('submit', (e) => {
+    e.preventDefault();
+    let valid = true;
+
+    form.querySelectorAll('[name]').forEach(input => {
+      const error = validateField(input.name, input.value);
+      if (error) { showError(input, error); valid = false; }
+      else clearError(input);
+    });
+
+    if (!valid) {
+      const firstError = form.querySelector('.error');
+      if (firstError) firstError.scrollIntoView({ behavior: 'smooth', block: 'center' });
+      return;
+    }
+
+    // Success state — REPLACE with your backend/API call
+    const submitBtn = form.querySelector('[type="submit"]');
+    if (submitBtn) {
+      submitBtn.textContent = 'Sending…';
+      submitBtn.disabled = true;
+    }
+
+    setTimeout(() => {
+      form.style.display = 'none';
+      if (successMsg) successMsg.classList.add('visible');
+    }, 1200);
+  });
+}
+
+
+/* ============================================================
+   6. COUNTER ANIMATIONS (Stats)
+   ============================================================ */
+function initCounters() {
+  const counters = document.querySelectorAll('[data-count]');
+  if (!counters.length) return;
+
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (!entry.isIntersecting) return;
+      const el    = entry.target;
+      const target = parseInt(el.dataset.count, 10);
+      const suffix = el.dataset.suffix || '';
+      const prefix = el.dataset.prefix || '';
+      const duration = 1800;
+      const start  = performance.now();
+
+      function update(now) {
+        const elapsed  = now - start;
+        const progress = Math.min(elapsed / duration, 1);
+        // Ease out expo
+        const eased    = 1 - Math.pow(2, -10 * progress);
+        const current  = Math.round(eased * target);
+        el.textContent = prefix + current + suffix;
+        if (progress < 1) requestAnimationFrame(update);
+      }
+
+      requestAnimationFrame(update);
+      observer.unobserve(el);
+    });
+  }, { threshold: 0.5 });
+
+  counters.forEach(c => observer.observe(c));
+}
+
+
+/* ============================================================
+   7. SMOOTH SCROLL FOR ANCHOR LINKS
+   ============================================================ */
+function initSmoothScroll() {
+  document.querySelectorAll('a[href^="#"]').forEach(link => {
+    link.addEventListener('click', (e) => {
+      const target = document.querySelector(link.getAttribute('href'));
+      if (!target) return;
+      e.preventDefault();
+      const offset = parseInt(getComputedStyle(document.documentElement).getPropertyValue('--nav-height') || '76', 10);
+      const top    = target.getBoundingClientRect().top + window.scrollY - offset - 20;
+      window.scrollTo({ top, behavior: 'smooth' });
+    });
+  });
+}
+
+
+/* ============================================================
+   INIT — Run all on DOM ready
+   ============================================================ */
+document.addEventListener('DOMContentLoaded', () => {
+  initScrollReveal();
+  initHeroPanel();
+  initFAQ();
+  initContactForm();
+  initCounters();
+  initSmoothScroll();
+});
+
+
+</script>
+
+<script>
+
+/* ============================================================
+   INTERACTIVE SCROLLING ENGINE
+   ============================================================ */
+(function() {
+  'use strict';
+
+  /* 1. SCROLL PROGRESS BAR */
+  const progressBar = document.createElement('div');
+  progressBar.className = 'scroll-progress';
+  document.body.prepend(progressBar);
+
+  function updateProgress() {
+    const scrollTop  = window.scrollY;
+    const docHeight  = document.documentElement.scrollHeight - window.innerHeight;
+    const pct        = docHeight > 0 ? (scrollTop / docHeight) * 100 : 0;
+    progressBar.style.width = pct + '%';
+  }
+
+  /* 2. SCROLL HINT on hero */
+  const hero = document.querySelector('.hero');
+  if (hero) {
+    const hint = document.createElement('div');
+    hint.className = 'scroll-hint';
+    hint.innerHTML = '<div class="scroll-hint__dot"></div><div class="scroll-hint__line"></div>';
+    hint.addEventListener('click', () => {
+      const next = hero.nextElementSibling;
+      if (next) next.scrollIntoView({ behavior: 'smooth' });
+    });
+    hero.style.position = 'relative';
+    hero.appendChild(hint);
+    // Hide hint after first scroll
+    window.addEventListener('scroll', function hideHint() {
+      if (window.scrollY > 80) {
+        hint.style.opacity = '0';
+        hint.style.transition = 'opacity 0.4s';
+        window.removeEventListener('scroll', hideHint);
+      }
+    }, { passive: true });
+  }
+
+  /* 3. PARALLAX HERO BACKGROUND */
+  const heroBg   = document.querySelector('.hero__bg');
+  const heroGrid = document.querySelector('.hero__grid');
+  function parallax() {
+    const y = window.scrollY;
+    if (heroBg)   heroBg.style.transform   = 'translateY(' + (y * 0.25) + 'px)';
+    if (heroGrid) heroGrid.style.transform = 'translateY(' + (y * 0.15) + 'px)';
+  }
+
+  /* 4. DIRECTIONAL REVEALS - assign left/right/scale to elements */
+  function assignRevealDirections() {
+    // Section headers reveal from bottom (default .reveal)
+    // Cards in grid: alternate left/right
+    document.querySelectorAll('.services-grid .service-card').forEach((el, i) => {
+      el.classList.remove('reveal');
+      el.classList.add(i % 2 === 0 ? 'reveal-left' : 'reveal-right');
+    });
+    document.querySelectorAll('.differentiators-grid .diff-card').forEach((el, i) => {
+      el.classList.remove('reveal');
+      el.classList.add(i % 2 === 0 ? 'reveal-left' : 'reveal-right');
+    });
+    document.querySelectorAll('.articles-grid .article-card').forEach((el, i) => {
+      el.classList.remove('reveal');
+      el.classList.add('reveal-scale');
+    });
+    document.querySelectorAll('.stats-grid .stat-item').forEach(el => {
+      el.classList.remove('reveal');
+      el.classList.add('reveal-scale');
+    });
+    document.querySelectorAll('.industry-item').forEach((el, i) => {
+      el.classList.remove('reveal','reveal-delay-1','reveal-delay-2','reveal-delay-3');
+      el.classList.add(i % 2 === 0 ? 'reveal-left' : 'reveal-right');
+    });
+    document.querySelectorAll('.insight-card').forEach((el, i) => {
+      el.classList.remove('reveal');
+      el.classList.add('reveal-scale');
+    });
+  }
+
+  /* 5. ENHANCED INTERSECTION OBSERVER for all reveal types */
+  function initEnhancedReveal() {
+    const allRevealClasses = ['.reveal','.reveal-left','.reveal-right','.reveal-scale'];
+    const elements = document.querySelectorAll(allRevealClasses.join(','));
+    if (!elements.length) return;
+
+    elements.forEach(el => el.classList.add('will-animate'));
+
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach((entry, idx) => {
+        if (!entry.isIntersecting) return;
+        // Stagger siblings in same parent
+        const siblings = Array.from(entry.target.parentElement.querySelectorAll(
+          '.reveal.will-animate, .reveal-left.will-animate, .reveal-right.will-animate, .reveal-scale.will-animate'
+        ));
+        const sibIdx = siblings.indexOf(entry.target);
+        const delay  = sibIdx > 0 ? Math.min(sibIdx * 80, 400) : 0;
+        setTimeout(() => entry.target.classList.add('revealed'), delay);
+        observer.unobserve(entry.target);
+      });
+    }, { threshold: 0.1, rootMargin: '0px 0px -40px 0px' });
+
+    requestAnimationFrame(() => elements.forEach(el => observer.observe(el)));
+  }
+
+  /* 6. SECTION EYEBROW LINE ANIMATION */
+  function initEyebrowLines() {
+    const eyebrows = document.querySelectorAll('.section-eyebrow');
+    if (!eyebrows.length) return;
+    const obs = new IntersectionObserver(entries => {
+      entries.forEach(e => {
+        if (e.isIntersecting) {
+          e.target.classList.add('line-grown');
+          obs.unobserve(e.target);
+        }
+      });
+    }, { threshold: 0.5 });
+    eyebrows.forEach(el => obs.observe(el));
+  }
+
+  /* 7. CARD 3D TILT */
+  function initCardTilt() {
+    const cards = document.querySelectorAll(
+      '.service-card, .diff-card, .article-card, .insight-card, .stat-item'
+    );
+    cards.forEach(card => {
+      card.addEventListener('mousemove', e => {
+        const rect   = card.getBoundingClientRect();
+        const cx     = rect.left + rect.width / 2;
+        const cy     = rect.top  + rect.height / 2;
+        const dx     = (e.clientX - cx) / (rect.width / 2);
+        const dy     = (e.clientY - cy) / (rect.height / 2);
+        const tiltX  = dy * -5;
+        const tiltY  = dx * 5;
+        card.style.transform = `perspective(800px) rotateX(${tiltX}deg) rotateY(${tiltY}deg) translateZ(4px)`;
+      });
+      card.addEventListener('mouseleave', () => {
+        card.style.transform = 'perspective(800px) rotateX(0deg) rotateY(0deg) translateZ(0px)';
+      });
+    });
+  }
+
+  /* 8. STAT COUNTER WITH POP */
+  function initCounterPop() {
+    const counters = document.querySelectorAll('[data-count]');
+    if (!counters.length) return;
+    const obs = new IntersectionObserver(entries => {
+      entries.forEach(entry => {
+        if (!entry.isIntersecting) return;
+        const el      = entry.target;
+        const target  = parseInt(el.dataset.count, 10);
+        const suffix  = el.dataset.suffix || '';
+        const dur     = 1800;
+        const start   = performance.now();
+        function update(now) {
+          const t       = Math.min((now - start) / dur, 1);
+          const eased   = 1 - Math.pow(2, -10 * t);
+          el.textContent = Math.round(eased * target) + suffix;
+          if (t < 1) { requestAnimationFrame(update); }
+          else {
+            el.textContent = target + suffix;
+            el.closest('.stat-item__value')?.classList.add('popped');
+          }
+        }
+        requestAnimationFrame(update);
+        obs.unobserve(el);
+      });
+    }, { threshold: 0.6 });
+    counters.forEach(el => obs.observe(el));
+  }
+
+  /* 9. ACTIVE SECTION NAV HIGHLIGHT */
+  function initActiveSection() {
+    const sections = document.querySelectorAll('section[aria-labelledby], section.hero, section.page-hero, section.hub-hero');
+    const navLinks = document.querySelectorAll('.nav__link');
+    if (!sections.length || !navLinks.length) return;
+
+    const pageFile = location.pathname.split('/').pop() || 'index.html';
+    const obs = new IntersectionObserver(entries => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting && entry.intersectionRatio > 0.3) {
+          navLinks.forEach(l => l.classList.remove('section-active'));
+          const match = Array.from(navLinks).find(l => l.getAttribute('href') === pageFile);
+          if (match) match.classList.add('section-active');
+        }
+      });
+    }, { threshold: 0.3 });
+    sections.forEach(s => obs.observe(s));
+  }
+
+  /* 10. SMOOTH SCROLL with offset */
+  function initSmoothScroll() {
+    document.querySelectorAll('a[href^="#"]').forEach(link => {
+      link.addEventListener('click', e => {
+        const target = document.querySelector(link.getAttribute('href'));
+        if (!target) return;
+        e.preventDefault();
+        const offset = parseInt(getComputedStyle(document.documentElement)
+          .getPropertyValue('--nav-height') || '76', 10) + 20;
+        window.scrollTo({ top: target.getBoundingClientRect().top + window.scrollY - offset, behavior: 'smooth' });
+      });
+    });
+  }
+
+  /* MAIN SCROLL HANDLER */
+  let ticking = false;
+  window.addEventListener('scroll', () => {
+    if (!ticking) {
+      requestAnimationFrame(() => {
+        updateProgress();
+        parallax();
+        ticking = false;
+      });
+      ticking = true;
+    }
+  }, { passive: true });
+
+  /* INIT ON DOM READY */
+  document.addEventListener('DOMContentLoaded', () => {
+    assignRevealDirections();
+    initEnhancedReveal();
+    initEyebrowLines();
+    initCardTilt();
+    initCounterPop();
+    initActiveSection();
+    initSmoothScroll();
+    updateProgress();
+  });
+
+})();
+
+</script>
+
+<script>
+
+/* === HAMBURGER MENU === */
+(function() {
+  var hamburger  = document.querySelector('.hamburger');
+  var mobileNav  = document.querySelector('.nav__mobile');
+  var mobileLinks = document.querySelectorAll('.nav__mobile-link, .nav__mobile-cta');
+  var isOpen = false;
+
+  if (!hamburger || !mobileNav) return;
+
+  hamburger.addEventListener('click', function(e) {
+    e.stopPropagation();
+    isOpen = !isOpen;
+    hamburger.classList.toggle('open', isOpen);
+    if (isOpen) {
+      mobileNav.style.display = 'flex';
+      requestAnimationFrame(function() {
+        mobileNav.classList.add('open');
+      });
+      document.body.style.overflow = 'hidden';
+    } else {
+      mobileNav.classList.remove('open');
+      document.body.style.overflow = '';
+      setTimeout(function() {
+        if (!isOpen) mobileNav.style.display = 'none';
+      }, 300);
+    }
+  });
+
+  // Close on link click
+  mobileLinks.forEach(function(link) {
+    link.addEventListener('click', function() {
+      isOpen = false;
+      hamburger.classList.remove('open');
+      mobileNav.classList.remove('open');
+      document.body.style.overflow = '';
+      setTimeout(function() { mobileNav.style.display = 'none'; }, 300);
+    });
+  });
+
+  // Close on outside click
+  document.addEventListener('click', function(e) {
+    if (isOpen && !mobileNav.contains(e.target) && !hamburger.contains(e.target)) {
+      isOpen = false;
+      hamburger.classList.remove('open');
+      mobileNav.classList.remove('open');
+      document.body.style.overflow = '';
+      setTimeout(function() { mobileNav.style.display = 'none'; }, 300);
+    }
+  });
+
+  // Close on resize back to desktop
+  window.addEventListener('resize', function() {
+    if (window.innerWidth > 768 && isOpen) {
+      isOpen = false;
+      hamburger.classList.remove('open');
+      mobileNav.classList.remove('open');
+      mobileNav.style.display = 'none';
+      document.body.style.overflow = '';
+    }
+  });
+})();
+
+</script>
+</body>
+</html>

@@ -1,0 +1,387 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width,initial-scale=1.0"/>
+<meta name="description" content="OT and ICS environments face escalating nation-state and criminal cyber threats in 2026. This analysis covers the current threat landscape, the security frameworks designed for industrial environments, and the controls that reduce risk without disrupting operations."/>
+<meta name="keywords" content="OT security 2026, ICS cybersecurity, operational technology threats, industrial control system security, NERC CIP, IEC 62443, critical infrastructure cyber attacks, IT OT convergence security"/>
+<meta name="author" content="YGH Tech Advisory Team"/>
+<meta name="robots" content="index, follow"/>
+<link rel="canonical" href="https://www.yghtech.com/article-ot-security-2026.html"/>
+<meta property="og:type" content="article"/>
+<meta property="og:title" content="OT and ICS Cyber Threats 2026: Critical Infrastructure | YGH Tech"/>
+<meta property="og:description" content="OT and ICS environments face escalating nation-state and criminal cyber threats in 2026. This analysis covers the current threat landscape, the security frameworks designed for industrial environments, and the controls that reduce risk without disrupting operations."/>
+<meta property="og:url" content="https://www.yghtech.com/article-ot-security-2026.html"/>
+<meta property="og:site_name" content="YGH Tech"/>
+<meta property="og:locale" content="en_US"/>
+<meta property="article:published_time" content="2026-02-12T00:00:00+00:00"/>
+<meta property="article:section" content="Threat Intelligence"/>
+<meta name="twitter:card" content="summary_large_image"/>
+<meta name="twitter:title" content="OT and ICS Cyber Threats 2026: Critical Infrastructure | YGH Tech"/>
+<meta name="twitter:description" content="OT and ICS environments face escalating nation-state and criminal cyber threats in 2026. This analysis covers the current threat landscape, the security frameworks designed for industrial environments, and the controls that reduce risk without disrupting operations."/>
+<meta name="twitter:site" content="@Yghtech"/>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"Article","@id":"https://www.yghtech.com/article-ot-security-2026.html","headline":"Critical Infrastructure Under Attack: The OT and ICS Threat Landscape in 2026","description":"OT and ICS environments face escalating nation-state and criminal cyber threats in 2026. This analysis covers the current threat landscape, the security frameworks designed for industrial environments, and the controls that reduce risk without disrupting operations.","url":"https://www.yghtech.com/article-ot-security-2026.html","datePublished":"2026-02-12","dateModified":"2026-02-12","author":{"@type":"Organization","name":"YGH Tech"},"publisher":{"@type":"Organization","name":"YGH Tech","url":"https://www.yghtech.com"},"articleSection":"Threat Intelligence","timeRequired":"PT11M","keywords":"OT security 2026, ICS cybersecurity, operational technology threats, industrial control system security, NERC CIP, IEC 62443, critical infrastructure cyber attacks, IT OT convergence security"}</script>
+<title>OT and ICS Cyber Threats 2026: Critical Infrastructure | YGH Tech</title>
+<link rel="stylesheet" href="styles.css"/>
+<style>
+/* ============================================================
+   CLEAN ARTICLE LAYOUT
+   ============================================================ */
+.article-hero {
+  padding: calc(var(--nav-height) + 1.5rem) 0 2rem;
+  background: var(--bg-primary);
+  border-bottom: 1px solid var(--bg-border);
+}
+
+/* Combined top bar: breadcrumb + back in one row */
+.article-topbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin-bottom: 1.5rem;
+  padding-bottom: 1rem;
+  border-bottom: 1px solid var(--bg-border);
+}
+.article-breadcrumb {
+  display: flex;
+  align-items: center;
+  gap: 0.3rem;
+  font-family: var(--font-mono);
+  font-size: 0.68rem;
+  color: var(--text-muted);
+  letter-spacing: 0.06em;
+}
+.article-breadcrumb a {
+  color: var(--text-muted);
+  transition: color 0.2s;
+}
+.article-breadcrumb a:hover { color: var(--accent); }
+.article-breadcrumb .sep { color: var(--bg-border); margin: 0 0.2rem; }
+.article-breadcrumb .current { color: var(--accent); }
+.article-back {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-family: var(--font-mono);
+  font-size: 0.68rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--text-secondary);
+  transition: color 0.2s, gap 0.2s;
+  white-space: nowrap;
+}
+.article-back:hover { color: var(--accent); gap: 0.75rem; }
+
+/* Meta row */
+.article-meta {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.75rem;
+  margin-bottom: 1rem;
+}
+.article-cat {
+  font-family: var(--font-mono);
+  font-size: 0.65rem;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--accent);
+  background: rgba(201,168,76,0.08);
+  border: 1px solid rgba(201,168,76,0.2);
+  padding: 0.25rem 0.75rem;
+  border-radius: 100px;
+}
+.article-date, .article-read {
+  font-family: var(--font-mono);
+  font-size: 0.7rem;
+  color: var(--text-muted);
+}
+.article-date::before { content: ""; }
+.article-meta-sep {
+  width: 3px; height: 3px;
+  border-radius: 50%;
+  background: var(--bg-border);
+  display: inline-block;
+}
+
+/* Title */
+.article-title {
+  font-family: var(--font-display);
+  font-size: clamp(1.7rem, 3.5vw, 2.6rem);
+  font-weight: 700;
+  letter-spacing: -0.02em;
+  color: var(--text-primary);
+  line-height: 1.2;
+  margin-bottom: 1rem;
+  max-width: 820px;
+}
+
+/* Lead paragraph */
+.article-lead {
+  font-size: 1rem;
+  color: var(--text-secondary);
+  line-height: 1.8;
+  max-width: 680px;
+}
+
+/* Article body */
+.article-body {
+  max-width: 760px;
+  margin: 0 auto;
+  padding: 2.5rem 0 3.5rem;
+}
+.article-body h2 {
+  font-family: var(--font-display);
+  font-size: 1.35rem;
+  font-weight: 700;
+  color: var(--text-primary);
+  margin: 2.25rem 0 0.75rem;
+  letter-spacing: -0.015em;
+  padding-top: 0.5rem;
+  border-top: 1px solid var(--bg-border);
+}
+.article-body h2:first-child { border-top: none; margin-top: 0; }
+.article-body h3 {
+  font-family: var(--font-display);
+  font-size: 1.05rem;
+  font-weight: 600;
+  color: var(--text-primary);
+  margin: 1.5rem 0 0.5rem;
+}
+.article-body p {
+  font-size: 0.96rem;
+  color: var(--text-secondary);
+  line-height: 1.9;
+  margin-bottom: 1.1rem;
+}
+.article-body ul, .article-body ol {
+  margin: 0.5rem 0 1.25rem 0;
+  padding-left: 0;
+  list-style: none;
+}
+.article-body li {
+  font-size: 0.95rem;
+  color: var(--text-secondary);
+  line-height: 1.8;
+  margin-bottom: 0.5rem;
+  padding-left: 1.25rem;
+  position: relative;
+}
+.article-body li::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0.65rem;
+  width: 5px; height: 5px;
+  border-radius: 50%;
+  background: var(--accent);
+  flex-shrink: 0;
+}
+.article-callout {
+  background: var(--bg-secondary);
+  border-left: 2px solid var(--accent);
+  border-radius: 0 var(--radius-md) var(--radius-md) 0;
+  padding: 1.1rem 1.4rem;
+  margin: 1.5rem 0;
+}
+.article-callout p {
+  margin: 0;
+  font-size: 0.92rem;
+  color: var(--text-primary);
+  font-style: italic;
+  line-height: 1.75;
+}
+
+/* Related section */
+.article-related {
+  background: var(--bg-secondary);
+  border-top: 1px solid var(--bg-border);
+  padding: 2rem 0 2.5rem;
+}
+.related-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 0.75rem;
+  margin-top: 1.25rem;
+}
+.related-card {
+  background: var(--bg-surface);
+  border: 1px solid var(--bg-border);
+  border-radius: var(--radius-md);
+  padding: 1.1rem 1.25rem;
+  text-decoration: none;
+  transition: border-color 0.2s, transform 0.2s;
+  display: block;
+}
+.related-card:hover {
+  border-color: rgba(201,168,76,0.35);
+  transform: translateY(-2px);
+}
+.related-card__cat {
+  font-family: var(--font-mono);
+  font-size: 0.62rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--accent);
+  margin-bottom: 0.4rem;
+}
+.related-card__title {
+  font-family: var(--font-display);
+  font-size: 0.88rem;
+  font-weight: 600;
+  color: var(--text-primary);
+  line-height: 1.4;
+}
+
+@media(max-width:768px) {
+  .article-title { font-size: 1.65rem; }
+  .related-grid { grid-template-columns: 1fr; }
+  .article-body { padding: 1.75rem 0 2.5rem; }
+  .article-topbar { flex-direction: column; align-items: flex-start; }
+}
+
+
+/* === ARTICLE HERO OVERRIDE (defeats global section spacing) === */
+section.article-hero {
+  padding-top: calc(var(--nav-height) + 2rem) !important;
+  padding-bottom: 2rem !important;
+}
+.article-topbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin-bottom: 1.25rem;
+  padding-bottom: 0.85rem;
+  border-bottom: 1px solid var(--bg-border);
+}
+/* No gap between hero and article body */
+section.article-hero + div.container {
+  margin-top: 0 !important;
+  padding-top: 0 !important;
+}
+section.article-related {
+  padding: 2rem 0 2.5rem !important;
+}
+
+
+/* === ARTICLE UNIFIED LAYOUT === */
+/* Both hero and body use the same centered column */
+.article-hero { background: var(--bg-primary); border-bottom: 1px solid var(--bg-border); }
+.article-hero .container,
+.article-body-wrap { max-width: 860px; margin: 0 auto; padding-left: 2rem; padding-right: 2rem; }
+
+/* Override container default max-width inside articles */
+section.article-hero .container { max-width: 860px !important; }
+
+/* Article body wrapper aligns to same column */
+.article-body-wrap { padding-top: 2.5rem; padding-bottom: 3.5rem; }
+.article-body { max-width: 100% !important; margin: 0 !important; padding: 0 !important; }
+
+/* Hero title   left aligned, not too wide */
+.article-title { font-size: clamp(1.75rem, 3.2vw, 2.5rem) !important; max-width: 100% !important; }
+.article-lead { max-width: 100% !important; }
+
+/* Related section same column */
+.article-related .container { max-width: 860px !important; }
+</style>
+</head>
+<body>
+<nav class="nav"><div class="nav__inner"><a href="index.html" class="nav__logo"><img src="logo.jpg" alt="YGH Tech" style="height:36px;width:auto;display:block;object-fit:contain;object-position:top center;"></a><ul class="nav__links"><li><a href="index.html" class="nav__link">Home</a></li><li><a href="services.html" class="nav__link">Services</a></li><li><a href="why-us.html" class="nav__link">Why Us</a></li><li><a href="industries.html" class="nav__link">Industries</a></li><li><a href="process.html" class="nav__link">Our Process</a></li><li><a href="about.html" class="nav__link">About</a></li><li><a href="hub.html" class="nav__link active">The Hub</a></li><li><a href="contact.html" class="nav__link">Contact</a></li></ul><div class="nav__cta"><a href="contact.html" class="btn btn-primary">Book a Consultation</a><button class="hamburger" aria-label="Toggle menu"><span class="hamburger__line"></span><span class="hamburger__line"></span><span class="hamburger__line"></span></button></div></div></nav><div class="nav__mobile"><a href="index.html" class="nav__mobile-link">Home</a><a href="services.html" class="nav__mobile-link">Services</a><a href="why-us.html" class="nav__mobile-link">Why Us</a><a href="industries.html" class="nav__mobile-link">Industries</a><a href="process.html" class="nav__mobile-link">Our Process</a><a href="about.html" class="nav__mobile-link">About</a><a href="hub.html" class="nav__mobile-link active">The Hub</a><a href="contact.html" class="nav__mobile-link">Contact</a><a href="contact.html" class="btn btn-primary nav__mobile-cta">Book a Consultation</a></div>
+<section class="article-hero"><div class="container"><div class="article-topbar"><nav class="article-breadcrumb" aria-label="Breadcrumb"><a href="index.html">Home</a><span class="sep">&#8250;</span><a href="hub.html">The Hub</a><span class="sep">&#8250;</span><span class="current">Threat Intelligence</span></nav><a href="hub.html" class="article-back">&#8592; Back to The Hub</a></div><div class="article-meta"><span class="article-cat">Threat Intelligence</span><span class="article-meta-sep"></span><time class="article-date" datetime="2026-02-12">February 12, 2026</time><span class="article-meta-sep"></span><span class="article-read">11 min read</span></div><h1 class="article-title">Critical Infrastructure Under Attack: The OT and ICS Threat Landscape in 2026</h1><p class="article-lead">Nation-state and criminal threat actors are targeting operational technology environments with increasing sophistication in 2026. Industrial control systems that were designed for isolation are now connected to enterprise networks and the internet. The consequences of getting this wrong are severe.</p></div></section>
+<div class="article-body-wrap"><div class="article-body">
+<h2>Why OT Security Has Become Urgent</h2>
+<p>Operational technology environments, the industrial control systems, supervisory control and data acquisition systems, and programmable logic controllers that manage physical processes in manufacturing, energy, water treatment, transportation, and other critical sectors, were historically designed with the assumption that they would be isolated from general IT networks and the internet. Isolation was the primary security control. The operational consequences of a cyber incident were considered unlikely because access was physically restricted.</p>
+<p>That assumption has been systematically invalidated over the past decade. Remote monitoring requirements, supply chain connectivity, enterprise network integration for operational data analytics, and the adoption of standard IT components in OT environments have created connectivity that the original designs never contemplated. The result is that adversaries who can compromise a corporate IT network frequently have a path to operational technology environments that were never designed to resist a capable attacker.</p>
+<h2>The Current Threat Landscape</h2>
+<h3>Nation-State Pre-Positioning</h3>
+<p>Multiple nation-state threat groups have been documented establishing persistent access in critical infrastructure environments in the United States, Europe, and Asia without executing destructive payloads. The most plausible interpretation of this activity is pre-positioning: establishing and maintaining access that could be activated to cause operational disruption in the event of geopolitical conflict. The Volt Typhoon activity documented by CISA and NSA beginning in 2023 and continuing through 2025 exemplifies this pattern. The threat is patient, technically sophisticated, and specifically designed to evade detection.</p>
+<h3>Ransomware Targeting Industrial Operations</h3>
+<p>Ransomware operators have learned that manufacturing and industrial companies place extremely high value on operational continuity, making them willing to pay significant ransoms to restore production. Groups have developed capabilities to identify and target OT environments specifically, understanding that a manufacturing line shutdown costs far more per hour than a data recovery, and that backup restoration does not address operational technology recovery in the same way it addresses IT recovery.</p>
+<h3>Supply Chain Compromise in Industrial Components</h3>
+<p>The supply chain for industrial control systems components, including firmware, software, and managed services, has been a demonstrated attack vector. Compromising a component that is deployed widely across critical infrastructure creates a single point of attack with broad reach. Security reviews of OT supply chains, including vendor security assessments and software bill of materials for OT components, are increasingly necessary elements of a defensible OT security program.</p>
+<h2>The Frameworks for OT Security</h2>
+<p>Several frameworks specifically address OT security requirements. IEC 62443 provides a comprehensive framework for industrial automation and control system security covering both the products and the systems that use them. NIST SP 800-82 provides guidance specifically for industrial control system security. The CISA Cross-Sector Cybersecurity Performance Goals include a subset of OT-specific controls. For organizations in the energy sector, NERC CIP provides mandatory reliability standards that include cybersecurity requirements for bulk electric system assets.</p>
+<div class="article-callout"><p>The most important OT security control is network segmentation that genuinely limits what an IT compromise can reach in the OT environment. In many organizations, the connection between IT and OT networks is more permissive than the organization believes it to be. Mapping and validating this boundary is often the most valuable first step in an OT security assessment.</p></div>
+<h2>Starting Points for OT Security Improvement</h2>
+<ul>
+<li>Conduct an OT asset inventory to establish a complete picture of what is in the environment and how it is connected</li>
+<li>Map the boundary between IT and OT networks and validate that it is as restrictive as assumed</li>
+<li>Identify and prioritize the highest-consequence OT systems for protection investment</li>
+<li>Assess whether remote access to OT systems is appropriately controlled and monitored</li>
+<li>Develop an incident response plan that specifically addresses OT incidents and the different recovery requirements they involve</li>
+<li>Engage OT-specialized security expertise for assessments, as IT security approaches do not translate directly to OT environments</li>
+</ul>
+</div></div>
+<section class="article-related"><div class="container"><p class="section-eyebrow">Continue Reading</p><h2 class="section-title" style="font-size:1.4rem;margin-bottom:0;">Related Articles</h2><div class="related-grid"><a href="article-ransomware-2025.html" class="related-card"><p class="related-card__cat">Threat Intelligence</p><h3 class="related-card__title">The 2025 Ransomware Landscape</h3></a><a href="article-third-party-risk.html" class="related-card"><p class="related-card__cat">Risk Management</p><h3 class="related-card__title">Third-Party Risk Management</h3></a><a href="article-incident-response.html" class="related-card"><p class="related-card__cat">Incident Response</p><h3 class="related-card__title">What to Look for in an Incident Response Retainer</h3></a></div></div></section>
+<footer class="footer" role="contentinfo"><div class="container"><div class="footer__grid"><div class="footer__brand-col"><a href="index.html"><img src="logo.jpg" alt="YGH Tech" style="height:90px;width:auto;display:block;"></a></div><div class="footer__cols-group"><div><h3 class="footer__col-title">Navigate</h3><ul class="footer__links"><li><a href="index.html" class="footer__link">Home</a></li><li><a href="services.html" class="footer__link">Services</a></li><li><a href="why-us.html" class="footer__link">Why Us</a></li><li><a href="industries.html" class="footer__link">Industries</a></li><li><a href="process.html" class="footer__link">Our Process</a></li></ul></div><div><h3 class="footer__col-title">Explore</h3><ul class="footer__links"><li><a href="about.html" class="footer__link">About</a></li><li><a href="hub.html" class="footer__link">The Hub</a></li></ul></div><div><h3 class="footer__col-title">Connect</h3><ul class="footer__links"><li><a href="contact.html" class="footer__link">Contact Us</a></li><li><a href="#" class="footer__link">Privacy Policy</a></li></ul></div></div></div><div class="footer__bottom"><p class="footer__copy">&copy; 2025 YGH Tech. All rights reserved.</p></div></div></footer>
+<script>
+
+/* === HAMBURGER MENU === */
+(function() {
+  var hamburger  = document.querySelector('.hamburger');
+  var mobileNav  = document.querySelector('.nav__mobile');
+  var mobileLinks = document.querySelectorAll('.nav__mobile-link, .nav__mobile-cta');
+  var isOpen = false;
+
+  if (!hamburger || !mobileNav) return;
+
+  hamburger.addEventListener('click', function(e) {
+    e.stopPropagation();
+    isOpen = !isOpen;
+    hamburger.classList.toggle('open', isOpen);
+    if (isOpen) {
+      mobileNav.style.display = 'flex';
+      requestAnimationFrame(function() {
+        mobileNav.classList.add('open');
+      });
+      document.body.style.overflow = 'hidden';
+    } else {
+      mobileNav.classList.remove('open');
+      document.body.style.overflow = '';
+      setTimeout(function() {
+        if (!isOpen) mobileNav.style.display = 'none';
+      }, 300);
+    }
+  });
+
+  // Close on link click
+  mobileLinks.forEach(function(link) {
+    link.addEventListener('click', function() {
+      isOpen = false;
+      hamburger.classList.remove('open');
+      mobileNav.classList.remove('open');
+      document.body.style.overflow = '';
+      setTimeout(function() { mobileNav.style.display = 'none'; }, 300);
+    });
+  });
+
+  // Close on outside click
+  document.addEventListener('click', function(e) {
+    if (isOpen && !mobileNav.contains(e.target) && !hamburger.contains(e.target)) {
+      isOpen = false;
+      hamburger.classList.remove('open');
+      mobileNav.classList.remove('open');
+      document.body.style.overflow = '';
+      setTimeout(function() { mobileNav.style.display = 'none'; }, 300);
+    }
+  });
+
+  // Close on resize back to desktop
+  window.addEventListener('resize', function() {
+    if (window.innerWidth > 768 && isOpen) {
+      isOpen = false;
+      hamburger.classList.remove('open');
+      mobileNav.classList.remove('open');
+      mobileNav.style.display = 'none';
+      document.body.style.overflow = '';
+    }
+  });
+})();
+
+</script>
+</body>
+</html>

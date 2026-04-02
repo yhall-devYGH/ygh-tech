@@ -1,0 +1,458 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width,initial-scale=1.0"/>
+  <!-- Primary SEO -->
+  <meta name="description" content="Ransomware in 2025 now targets backups first and uses triple extortion. Learn the current tactics, most-targeted industries, and the security controls that build real resilience."/>
+  <meta name="keywords" content="ransomware 2025, ransomware extortion tactics, ransomware defense, backup security, EDR bypass, ransomware resilience, cybersecurity advisory"/>
+  <meta name="author" content="YGH Tech Advisory Team"/>
+  <meta name="robots" content="index, follow"/>
+  <link rel="canonical" href="https://www.yghtech.com/article-ransomware-2025.html"/>
+
+  <!-- Open Graph -->
+  <meta property="og:type"        content="article"/>
+  <meta property="og:title" content="The 2025 Ransomware Landscape: New Extortion Tactics | YGH Tech"/>
+  <meta property="og:description" content="Ransomware in 2025 now targets backups first and uses triple extortion. Learn the current tactics, most-targeted industries, and the security controls that build real resilience."/>
+  <meta property="og:url"         content="https://www.yghtech.com/article-ransomware-2025.html"/>
+  <meta property="og:site_name"   content="YGH Tech"/>
+  <meta property="og:locale"      content="en_US"/>
+  <meta property="article:published_time" content="2025-03-12T00:00:00+00:00"/>
+  <meta property="article:author"         content="YGH Tech Advisory Team"/>
+  <meta property="article:section"        content="Threat Intelligence"/>
+  <meta property="article:tag"            content="ransomware 2025"/>
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card"        content="summary_large_image"/>
+  <meta name="twitter:title" content="The 2025 Ransomware Landscape: New Extortion Tactics | YGH Tech"/>
+  <meta name="twitter:description" content="Ransomware in 2025 now targets backups first and uses triple extortion. Learn the current tactics, most-targeted industries, and the security controls that build real resilience."/>
+  <meta name="twitter:site"        content="@Yghtech"/>
+
+  <!-- Schema.org JSON-LD -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "@id": "https://www.yghtech.com/article-ransomware-2025.html",
+    "headline": "The 2025 Ransomware Landscape: New Extortion Tactics and the Organizations Being Targeted",
+    "description": "Ransomware in 2025 now targets backups first and uses triple extortion. Learn the current tactics, most-targeted industries, and the security controls that build real resilience.",
+    "url": "https://www.yghtech.com/article-ransomware-2025.html",
+    "datePublished": "2025-03-12",
+    "dateModified":  "2025-03-12",
+    "author": {"@type": "Organization", "name": "YGH Tech", "url": "https://www.yghtech.com"},
+    "publisher": {
+      "@type": "Organization",
+      "name": "YGH Tech",
+      "url":  "https://www.yghtech.com",
+      "logo": {"@type": "ImageObject", "url": "https://www.yghtech.com/logo.jpg"}
+    },
+    "mainEntityOfPage": {"@type": "WebPage", "@id": "https://www.yghtech.com/article-ransomware-2025.html"},
+    "articleSection": "Threat Intelligence",
+    "timeRequired": "PT11M",
+    "keywords": "ransomware 2025, ransomware extortion tactics, ransomware defense, backup security, EDR bypass, ransomware resilience, cybersecurity advisory",
+    "breadcrumb": {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {"@type": "ListItem", "position": 1, "name": "Home",     "item": "https://www.yghtech.com/"},
+        {"@type": "ListItem", "position": 2, "name": "The Hub",  "item": "https://www.yghtech.com/hub.html"},
+        {"@type": "ListItem", "position": 3, "name": "The 2025 Ransomware Landscape: New Extortion Tacti", "item": "https://www.yghtech.com/article-ransomware-2025.html"}
+      ]
+    }
+  }
+  </script>
+<title>The 2025 Ransomware Landscape: New Extortion Tactics | YGH Tech</title>
+<link rel="stylesheet" href="styles.css"/>
+<style>
+/* ============================================================
+   CLEAN ARTICLE LAYOUT
+   ============================================================ */
+.article-hero {
+  padding: calc(var(--nav-height) + 1.5rem) 0 2rem;
+  background: var(--bg-primary);
+  border-bottom: 1px solid var(--bg-border);
+}
+
+/* Combined top bar: breadcrumb + back in one row */
+.article-topbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin-bottom: 1.5rem;
+  padding-bottom: 1rem;
+  border-bottom: 1px solid var(--bg-border);
+}
+.article-breadcrumb {
+  display: flex;
+  align-items: center;
+  gap: 0.3rem;
+  font-family: var(--font-mono);
+  font-size: 0.68rem;
+  color: var(--text-muted);
+  letter-spacing: 0.06em;
+}
+.article-breadcrumb a {
+  color: var(--text-muted);
+  transition: color 0.2s;
+}
+.article-breadcrumb a:hover { color: var(--accent); }
+.article-breadcrumb .sep { color: var(--bg-border); margin: 0 0.2rem; }
+.article-breadcrumb .current { color: var(--accent); }
+.article-back {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-family: var(--font-mono);
+  font-size: 0.68rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--text-secondary);
+  transition: color 0.2s, gap 0.2s;
+  white-space: nowrap;
+}
+.article-back:hover { color: var(--accent); gap: 0.75rem; }
+
+/* Meta row */
+.article-meta {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.75rem;
+  margin-bottom: 1rem;
+}
+.article-cat {
+  font-family: var(--font-mono);
+  font-size: 0.65rem;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--accent);
+  background: rgba(201,168,76,0.08);
+  border: 1px solid rgba(201,168,76,0.2);
+  padding: 0.25rem 0.75rem;
+  border-radius: 100px;
+}
+.article-date, .article-read {
+  font-family: var(--font-mono);
+  font-size: 0.7rem;
+  color: var(--text-muted);
+}
+.article-date::before { content: ""; }
+.article-meta-sep {
+  width: 3px; height: 3px;
+  border-radius: 50%;
+  background: var(--bg-border);
+  display: inline-block;
+}
+
+/* Title */
+.article-title {
+  font-family: var(--font-display);
+  font-size: clamp(1.7rem, 3.5vw, 2.6rem);
+  font-weight: 700;
+  letter-spacing: -0.02em;
+  color: var(--text-primary);
+  line-height: 1.2;
+  margin-bottom: 1rem;
+  max-width: 820px;
+}
+
+/* Lead paragraph */
+.article-lead {
+  font-size: 1rem;
+  color: var(--text-secondary);
+  line-height: 1.8;
+  max-width: 680px;
+}
+
+/* Article body */
+.article-body {
+  max-width: 760px;
+  margin: 0 auto;
+  padding: 2.5rem 0 3.5rem;
+}
+.article-body h2 {
+  font-family: var(--font-display);
+  font-size: 1.35rem;
+  font-weight: 700;
+  color: var(--text-primary);
+  margin: 2.25rem 0 0.75rem;
+  letter-spacing: -0.015em;
+  padding-top: 0.5rem;
+  border-top: 1px solid var(--bg-border);
+}
+.article-body h2:first-child { border-top: none; margin-top: 0; }
+.article-body h3 {
+  font-family: var(--font-display);
+  font-size: 1.05rem;
+  font-weight: 600;
+  color: var(--text-primary);
+  margin: 1.5rem 0 0.5rem;
+}
+.article-body p {
+  font-size: 0.96rem;
+  color: var(--text-secondary);
+  line-height: 1.9;
+  margin-bottom: 1.1rem;
+}
+.article-body ul, .article-body ol {
+  margin: 0.5rem 0 1.25rem 0;
+  padding-left: 0;
+  list-style: none;
+}
+.article-body li {
+  font-size: 0.95rem;
+  color: var(--text-secondary);
+  line-height: 1.8;
+  margin-bottom: 0.5rem;
+  padding-left: 1.25rem;
+  position: relative;
+}
+.article-body li::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0.65rem;
+  width: 5px; height: 5px;
+  border-radius: 50%;
+  background: var(--accent);
+  flex-shrink: 0;
+}
+.article-callout {
+  background: var(--bg-secondary);
+  border-left: 2px solid var(--accent);
+  border-radius: 0 var(--radius-md) var(--radius-md) 0;
+  padding: 1.1rem 1.4rem;
+  margin: 1.5rem 0;
+}
+.article-callout p {
+  margin: 0;
+  font-size: 0.92rem;
+  color: var(--text-primary);
+  font-style: italic;
+  line-height: 1.75;
+}
+
+/* Related section */
+.article-related {
+  background: var(--bg-secondary);
+  border-top: 1px solid var(--bg-border);
+  padding: 2rem 0 2.5rem;
+}
+.related-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 0.75rem;
+  margin-top: 1.25rem;
+}
+.related-card {
+  background: var(--bg-surface);
+  border: 1px solid var(--bg-border);
+  border-radius: var(--radius-md);
+  padding: 1.1rem 1.25rem;
+  text-decoration: none;
+  transition: border-color 0.2s, transform 0.2s;
+  display: block;
+}
+.related-card:hover {
+  border-color: rgba(201,168,76,0.35);
+  transform: translateY(-2px);
+}
+.related-card__cat {
+  font-family: var(--font-mono);
+  font-size: 0.62rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--accent);
+  margin-bottom: 0.4rem;
+}
+.related-card__title {
+  font-family: var(--font-display);
+  font-size: 0.88rem;
+  font-weight: 600;
+  color: var(--text-primary);
+  line-height: 1.4;
+}
+
+@media(max-width:768px) {
+  .article-title { font-size: 1.65rem; }
+  .related-grid { grid-template-columns: 1fr; }
+  .article-body { padding: 1.75rem 0 2.5rem; }
+  .article-topbar { flex-direction: column; align-items: flex-start; }
+}
+
+
+/* === ARTICLE HERO OVERRIDE (defeats global section spacing) === */
+section.article-hero {
+  padding-top: calc(var(--nav-height) + 2rem) !important;
+  padding-bottom: 2rem !important;
+}
+.article-topbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin-bottom: 1.25rem;
+  padding-bottom: 0.85rem;
+  border-bottom: 1px solid var(--bg-border);
+}
+/* No gap between hero and article body */
+section.article-hero + div.container {
+  margin-top: 0 !important;
+  padding-top: 0 !important;
+}
+section.article-related {
+  padding: 2rem 0 2.5rem !important;
+}
+
+
+/* === ARTICLE UNIFIED LAYOUT === */
+/* Both hero and body use the same centered column */
+.article-hero { background: var(--bg-primary); border-bottom: 1px solid var(--bg-border); }
+.article-hero .container,
+.article-body-wrap { max-width: 860px; margin: 0 auto; padding-left: 2rem; padding-right: 2rem; }
+
+/* Override container default max-width inside articles */
+section.article-hero .container { max-width: 860px !important; }
+
+/* Article body wrapper aligns to same column */
+.article-body-wrap { padding-top: 2.5rem; padding-bottom: 3.5rem; }
+.article-body { max-width: 100% !important; margin: 0 !important; padding: 0 !important; }
+
+/* Hero title — left aligned, not too wide */
+.article-title { font-size: clamp(1.75rem, 3.2vw, 2.5rem) !important; max-width: 100% !important; }
+.article-lead { max-width: 100% !important; }
+
+/* Related section same column */
+.article-related .container { max-width: 860px !important; }
+</style>
+</head>
+<body>
+<nav class="nav"><div class="nav__inner"><a href="index.html" class="nav__logo"><img src="logo.jpg" alt="YGH Tech" style="height:36px;width:auto;display:block;object-fit:contain;object-position:top center;"></a><ul class="nav__links"><li><a href="index.html" class="nav__link">Home</a></li><li><a href="services.html" class="nav__link">Services</a></li><li><a href="why-us.html" class="nav__link">Why Us</a></li><li><a href="industries.html" class="nav__link">Industries</a></li><li><a href="process.html" class="nav__link">Our Process</a></li><li><a href="about.html" class="nav__link">About</a></li><li><a href="hub.html" class="nav__link active">The Hub</a></li><li><a href="contact.html" class="nav__link">Contact</a></li></ul><div class="nav__cta"><a href="contact.html" class="btn btn-primary">Book a Consultation</a><button class="hamburger" aria-label="Toggle menu"><span class="hamburger__line"></span><span class="hamburger__line"></span><span class="hamburger__line"></span></button></div></div></nav><div class="nav__mobile"><a href="index.html" class="nav__mobile-link">Home</a><a href="services.html" class="nav__mobile-link">Services</a><a href="why-us.html" class="nav__mobile-link">Why Us</a><a href="industries.html" class="nav__mobile-link">Industries</a><a href="process.html" class="nav__mobile-link">Our Process</a><a href="about.html" class="nav__mobile-link">About</a><a href="hub.html" class="nav__mobile-link active">The Hub</a><a href="contact.html" class="nav__mobile-link">Contact</a><a href="contact.html" class="btn btn-primary nav__mobile-cta">Book a Consultation</a></div>
+<section class="article-hero">
+<div class="container">
+<div class="article-topbar">
+<nav class="article-breadcrumb" aria-label="Breadcrumb">
+<a href="index.html">Home</a><span class="sep">&#8250;</span>
+<a href="hub.html">The Hub</a><span class="sep">&#8250;</span>
+<span class="current">Threat Intelligence</span>
+</nav>
+<a href="hub.html" class="article-back">&#8592; Back to The Hub</a>
+</div>
+<div class="article-meta">
+<span class="article-cat">Threat Intelligence</span>
+<span class="article-meta-sep"></span>
+<time class="article-date" datetime="2025-03-12">March 12, 2025</time>
+<span class="article-meta-sep"></span>
+<span class="article-read">11 min read</span>
+</div>
+<h1 class="article-title">The 2025 Ransomware Landscape: New Extortion Tactics and the Organizations Being Targeted</h1>
+<p class="article-lead">Ransomware has matured into a sophisticated multi-stage extortion operation targeting backup infrastructure, defeating EDR, and applying pressure through multiple leverage points simultaneously. Here is what the current threat looks like and what organizations must do to build genuine resilience.</p>
+</div>
+</section>
+<div class="article-body-wrap"><div class="article-body">
+<h2>The Evolution of Ransomware in 2025</h2>
+<p>Ransomware has transformed from a straightforward encryption-for-payment scheme into a sophisticated multi-stage extortion operation. In 2025, the average ransomware attack involves at least three distinct phases before encryption even begins: network reconnaissance, lateral movement to maximize impact, and deliberate exfiltration of the highest-value data to ensure leverage during negotiations.</p>
+<p>The groups driving this evolution are running what are functionally criminal enterprises with customer service portals, negotiation specialists, and technical support staff. The professionalism of the operation is matched by its destructiveness.</p>
+
+<h2>New Tactics Defining the Current Landscape</h2>
+<h3>Backup Infrastructure as Primary Target</h3>
+<p>Ransomware operators have learned that organizations with intact backups negotiate from a position of strength. The current playbook addresses this directly: before deploying encryption, threat actors spend days or weeks identifying and destroying backup infrastructure, disabling backup agents, corrupting cloud snapshots, and eliminating any viable recovery path that would allow an organization to restore without paying.</p>
+<p>This shift means that having backups is no longer sufficient. Organizations must also ensure that their backup systems are isolated from the networks they protect, monitored for unauthorized access, and tested regularly to confirm they are actually recoverable.</p>
+
+<h3>EDR Bypass as Standard Technique</h3>
+<p>The ransomware-as-a-service ecosystem has commoditized the ability to defeat endpoint detection and response tools. Techniques include driver abuse to disable security tooling, process injection that executes malicious code within legitimate system processes, and living-off-the-land techniques that use built-in Windows utilities to carry out attack steps that would otherwise trigger detection.</p>
+<p>This does not make EDR useless. It does mean that EDR alone is not a ransomware defense strategy. Organizations need layered controls, network segmentation to limit blast radius, and detection capabilities at the network and identity layers that complement endpoint protection.</p>
+
+<h3>Triple Extortion is Now Standard</h3>
+<p>The original ransomware model was simple: encrypt data, demand payment for decryption key. Double extortion added data exfiltration: pay or we publish your data. Triple extortion has added a third lever: direct contact with your customers, partners, regulators, and media to amplify pressure and reputational damage. Some groups now target cyber insurers directly to accelerate payouts.</p>
+
+<div class="article-callout"><p>Organizations that pay ransoms fund the development of the next generation of attacks. Payment also does not guarantee recovery. In a significant percentage of cases, organizations that pay receive decryption tools that are slow, incomplete, or non-functional.</p></div>
+
+<h2>The Industries Being Targeted in 2025</h2>
+<p>Healthcare remains the highest-volume target sector due to the combination of sensitive data, operational criticality, and historically underinvested security programs. A hospital that cannot access patient records for 48 hours faces genuine life-safety implications, which creates maximum pressure to pay quickly.</p>
+<p>Manufacturing and industrial organizations have become a priority target as the value of operational disruption has become apparent to threat actors. Shutting down a production line costs organizations far more per hour than data recovery, making manufacturers willing to pay significant ransoms to restore operations.</p>
+<p>Law firms and professional services organizations are targeted not only for their own data but because they hold client data across multiple organizations, creating a high-value single point of compromise.</p>
+
+<h2>What a Defensible Ransomware Posture Requires</h2>
+<p>Building genuine resilience against ransomware requires addressing the entire attack chain, not just the endpoint. The controls that make the most meaningful difference include:</p>
+<ul>
+<li>Network segmentation that limits lateral movement after initial access</li>
+<li>Immutable, offline backup copies tested quarterly for actual recoverability</li>
+<li>Privileged access management that prevents attackers from acquiring the administrative credentials needed to disable backup systems</li>
+<li>Multi-factor authentication on all remote access and email with phishing-resistant methods where feasible</li>
+<li>A tested incident response plan that includes a ransomware-specific playbook</li>
+<li>Cyber insurance that is aligned to your actual risk profile and covers ransomware response costs</li>
+</ul>
+<p>Ransomware resilience is not a technology purchase. It is an operational capability built through the disciplined implementation of controls, regular testing, and organizational readiness. Organizations that approach it as such recover faster, pay less, and suffer less reputational damage when attacks occur.</p>
+</div></div>
+<section class="article-related"><div class="container"><p class="section-eyebrow">Continue Reading</p><h2 class="section-title" style="font-size:1.4rem;margin-bottom:0;">Related Articles</h2><div class="related-grid"><a href="article-mfa-fatigue.html" class="related-card"><p class="related-card__cat">Identity and Access</p><h3 class="related-card__title">MFA Fatigue Attacks: How Adversaries Are Bypassing Multi-Factor Authentication</h3></a><a href="article-incident-response.html" class="related-card"><p class="related-card__cat">Incident Response</p><h3 class="related-card__title">What to Look for in an Incident Response Retainer Before You Need One</h3></a><a href="article-cyber-insurance.html" class="related-card"><p class="related-card__cat">Risk Management</p><h3 class="related-card__title">Cyber Insurance in 2025: What Underwriters Now Require</h3></a></div></div></section>
+<footer class="footer" role="contentinfo"><div class="container"><div class="footer__grid"><div class="footer__brand-col"><a href="index.html"><img src="logo.jpg" alt="YGH Tech" style="height:90px;width:auto;display:block;"></a></div><div class="footer__cols-group"><div><h3 class="footer__col-title">Navigate</h3><ul class="footer__links"><li><a href="index.html" class="footer__link">Home</a></li><li><a href="services.html" class="footer__link">Services</a></li><li><a href="why-us.html" class="footer__link">Why Us</a></li><li><a href="industries.html" class="footer__link">Industries</a></li><li><a href="process.html" class="footer__link">Our Process</a></li></ul></div><div><h3 class="footer__col-title">Explore</h3><ul class="footer__links"><li><a href="about.html" class="footer__link">About</a></li><li><a href="hub.html" class="footer__link">The Hub</a></li></ul></div><div><h3 class="footer__col-title">Connect</h3><ul class="footer__links"><li><a href="contact.html" class="footer__link">Contact Us</a></li><li><a href="#" class="footer__link">Privacy Policy</a></li></ul></div></div></div><div class="footer__bottom"><p class="footer__copy">&copy; 2025 YGH Tech. All rights reserved.</p></div></div></footer>
+<script>
+
+/* === HAMBURGER MENU === */
+(function() {
+  var hamburger  = document.querySelector('.hamburger');
+  var mobileNav  = document.querySelector('.nav__mobile');
+  var mobileLinks = document.querySelectorAll('.nav__mobile-link, .nav__mobile-cta');
+  var isOpen = false;
+
+  if (!hamburger || !mobileNav) return;
+
+  hamburger.addEventListener('click', function(e) {
+    e.stopPropagation();
+    isOpen = !isOpen;
+    hamburger.classList.toggle('open', isOpen);
+    if (isOpen) {
+      mobileNav.style.display = 'flex';
+      requestAnimationFrame(function() {
+        mobileNav.classList.add('open');
+      });
+      document.body.style.overflow = 'hidden';
+    } else {
+      mobileNav.classList.remove('open');
+      document.body.style.overflow = '';
+      setTimeout(function() {
+        if (!isOpen) mobileNav.style.display = 'none';
+      }, 300);
+    }
+  });
+
+  // Close on link click
+  mobileLinks.forEach(function(link) {
+    link.addEventListener('click', function() {
+      isOpen = false;
+      hamburger.classList.remove('open');
+      mobileNav.classList.remove('open');
+      document.body.style.overflow = '';
+      setTimeout(function() { mobileNav.style.display = 'none'; }, 300);
+    });
+  });
+
+  // Close on outside click
+  document.addEventListener('click', function(e) {
+    if (isOpen && !mobileNav.contains(e.target) && !hamburger.contains(e.target)) {
+      isOpen = false;
+      hamburger.classList.remove('open');
+      mobileNav.classList.remove('open');
+      document.body.style.overflow = '';
+      setTimeout(function() { mobileNav.style.display = 'none'; }, 300);
+    }
+  });
+
+  // Close on resize back to desktop
+  window.addEventListener('resize', function() {
+    if (window.innerWidth > 768 && isOpen) {
+      isOpen = false;
+      hamburger.classList.remove('open');
+      mobileNav.classList.remove('open');
+      mobileNav.style.display = 'none';
+      document.body.style.overflow = '';
+    }
+  });
+})();
+
+</script>
+</body>
+</html>

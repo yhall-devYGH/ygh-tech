@@ -65,6 +65,13 @@
   position: absolute !important;
   inset: 0 !important;
   opacity: 1 !important;
+  pointer-events: none !important;
+}
+.article-card__header-grid {
+  pointer-events: none !important;
+}
+.article-card__cat-icon {
+  pointer-events: none !important;
 }
 .article-card:hover .article-card__header-accent { opacity: 1 !important; filter: brightness(1.15); }
 
@@ -1185,8 +1192,9 @@ document.addEventListener('DOMContentLoaded', () => {
     eyebrows.forEach(el => obs.observe(el));
   }
 
-  /* 7. CARD 3D TILT */
+  /* 7. CARD 3D TILT — desktop only */
   function initCardTilt() {
+    if (window.innerWidth <= 768) return; // skip on mobile/touch
     const cards = document.querySelectorAll(
       '.service-card, .diff-card, .article-card, .insight-card, .stat-item'
     );
@@ -1437,6 +1445,47 @@ document.addEventListener('DOMContentLoaded', () => {
 
   // Initialise — show all
   filterArticles('all');
+})();
+
+</script>
+
+<script>
+
+/* ============================================================
+   MAKE ENTIRE ARTICLE CARD CLICKABLE (mobile + desktop)
+   ============================================================ */
+(function () {
+  document.querySelectorAll('.article-card').forEach(function (card) {
+    // Find the link inside the card title
+    var link = card.querySelector('a[href]');
+    if (!link) return;
+
+    var href = link.getAttribute('href');
+    if (!href) return;
+
+    // Make the entire card a click target
+    card.style.cursor = 'pointer';
+
+    card.addEventListener('click', function (e) {
+      // Don't intercept if user clicked the actual link directly
+      if (e.target.tagName === 'A') return;
+      window.location.href = href;
+    });
+
+    // Touch feedback
+    card.addEventListener('touchstart', function () {
+      card.style.opacity = '0.85';
+    }, { passive: true });
+
+    card.addEventListener('touchend', function () {
+      card.style.opacity = '';
+      window.location.href = href;
+    }, { passive: true });
+
+    card.addEventListener('touchcancel', function () {
+      card.style.opacity = '';
+    }, { passive: true });
+  });
 })();
 
 </script>

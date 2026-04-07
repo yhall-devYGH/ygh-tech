@@ -40,6 +40,25 @@
   status = 301
   force  = false
 
+# ── Force HTTPS ──
+[[redirects]]
+  from   = "http://yghtech.com/*"
+  to     = "https://www.yghtech.com/:splat"
+  status = 301
+  force  = true
+
+[[redirects]]
+  from   = "http://www.yghtech.com/*"
+  to     = "https://www.yghtech.com/:splat"
+  status = 301
+  force  = true
+
+[[redirects]]
+  from   = "https://yghtech.com/*"
+  to     = "https://www.yghtech.com/:splat"
+  status = 301
+  force  = true
+
 [[redirects]]
   from   = "/*"
   to     = "/404.html"

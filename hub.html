@@ -3406,9 +3406,18 @@ document.addEventListener('DOMContentLoaded', () => {
 
 <script>
 (function(){
-  var btns  = document.querySelectorAll('[data-filter]');
-  var cards = document.querySelectorAll('.article-card[data-category]');
+  var btns     = document.querySelectorAll('[data-filter]');
+  var cards    = document.querySelectorAll('.article-card[data-category]');
+  var countEl  = document.getElementById('articleCount');
+  var total    = cards.length;
   if (!btns.length || !cards.length) return;
+
+  function updateCount(visible) {
+    if (!countEl) return;
+    countEl.textContent = visible === total
+      ? 'Showing all ' + total + ' articles'
+      : 'Showing ' + visible + ' of ' + total + ' articles';
+  }
 
   btns.forEach(function(btn){
     btn.addEventListener('click', function(){
@@ -3416,13 +3425,17 @@ document.addEventListener('DOMContentLoaded', () => {
       btns.forEach(function(b){ b.classList.remove('active'); });
       btn.classList.add('active');
 
+      var visible = 0;
       cards.forEach(function(card){
         if (cat === 'all' || card.getAttribute('data-category') === cat) {
-          card.style.display = '';
+          card.classList.remove('hidden-by-filter');
+          visible++;
         } else {
-          card.style.display = 'none';
+          card.classList.add('hidden-by-filter');
         }
       });
+
+      updateCount(cat === 'all' ? total : visible);
     });
   });
 })();

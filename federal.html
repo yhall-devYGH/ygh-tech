@@ -29,6 +29,55 @@
 <title>Federal Contracting | YGH Technology Consultants</title>
 
 
+<style id="mobile-responsive-patch">
+/* ============================================================
+   MOBILE RESPONSIVE PATCH
+   Collapses inline 2-column grids and fixes text overflow on
+   small screens. Uses attribute selectors to target inline
+   style declarations; !important overrides inline specificity.
+   ============================================================ */
+@media (max-width: 900px) {
+  [style*="grid-template-columns:1fr 1fr"],
+  [style*="grid-template-columns: 1fr 1fr"],
+  [style*="grid-template-columns:1fr 1.2fr"],
+  [style*="grid-template-columns: 1fr 1.2fr"],
+  [style*="grid-template-columns:1.2fr 1fr"],
+  [style*="grid-template-columns: 1.2fr 1fr"] {
+    grid-template-columns: 1fr !important;
+    gap: 2rem !important;
+  }
+}
+@media (max-width: 768px) {
+  /* Prevent long IDs/codes (UEI, CAGE) from overflowing */
+  .hero *,
+  .page-hero *,
+  .about-metric * {
+    word-break: break-word;
+    overflow-wrap: anywhere;
+  }
+  /* Tighten stats / metric panels so they do not crush sibling content */
+  .about-metric,
+  .about-overview-visual {
+    width: 100% !important;
+    max-width: 100% !important;
+  }
+  .about-metric-value {
+    font-size: 1.5rem !important;
+    white-space: nowrap;
+  }
+  .about-metric-item {
+    gap: 0.5rem !important;
+    flex-wrap: wrap;
+  }
+  /* Prevent side panels / quote boxes from pushing body copy into a narrow column */
+  aside,
+  .quote-card,
+  blockquote {
+    max-width: 100% !important;
+    margin: 1.5rem 0 !important;
+  }
+}
+</style>
 </head>
 <style>
 /* YGH Tech Master Stylesheet */
@@ -1976,7 +2025,7 @@ Download Cap Statement
 </div>
 <div style="background:var(--bg-secondary);border:1px solid var(--bg-border);border-radius:var(--radius-sm);padding:1rem 1.25rem;display:flex;align-items:center;gap:0.75rem;">
 <span style="width:7px;height:7px;border-radius:50%;background:var(--accent);flex-shrink:0;"></span>
-<span style="font-size:0.88rem;color:var(--text-secondary);">15+ years combined practitioner experience across commercial and government sectors</span>
+<span style="font-size:0.88rem;color:var(--text-secondary);">75+ years combined practitioner experience across commercial and government sectors</span>
 </div>
 </div>
 
